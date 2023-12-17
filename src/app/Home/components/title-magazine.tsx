@@ -13,15 +13,15 @@ import title9 from "../../assets/title-letters/9.png"
 const TitleMagazine = () => {
   return (
     <div className='flex'>
-        <Image src={title1} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
-        <Image src={title2} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
-        <Image src={title3} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
-        <Image src={title4} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
-        <Image src={title5} alt="title" className='object-contain' unoptimized={true} width={90} height={0} />
-        <Image src={title6} alt="title" className='object-contain' unoptimized={true} width={75} height={0} />
-        <Image src={title7} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
-        <Image src={title8} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
-        <Image src={title9} alt="title" className='object-contain' unoptimized={true} width={120} height={0} />
+        <Image src={title1} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
+        <Image src={title2} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
+        <Image src={title3} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
+        <Image src={title4} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
+        <Image src={title5} alt="title" className='object-contain w-[30px] sm:w-[65px] xl:w-[90px]' unoptimized={true} width={0} height={0} />
+        <Image src={title6} alt="title" className='object-contain w-[25px] sm:w-[50px] xl:w-[75px]' unoptimized={true} width={0} height={0} />
+        <Image src={title7} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
+        <Image src={title8} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
+        <Image src={title9} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
     </div>
   )
 }
