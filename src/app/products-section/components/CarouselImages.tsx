@@ -29,10 +29,10 @@ interface DefaultControlsConfig  {
     pagingDotsContainerClassName: "bg-neutral-400/70 rounded-full ",
   }
 
-const CarouselImages = ({autoplayTime = 3000, images}: {autoplayTime:number, images:StaticImageData[]}) => {
+const CarouselImages = ({images}: {images:StaticImageData[]}) => {
   
     return (
-    <Carousel autoplay className="rounded-md" defaultControlsConfig={defaultControlsObj} wrapAround={true} autoplayInterval={autoplayTime}>
+    <Carousel autoplay className="rounded-md" defaultControlsConfig={defaultControlsObj} wrapAround={true} >
       {images.map((image, index) => (
             <Image key={index} src={image} className="object-cover h-full w-[350px]" alt="Carousel image" width={300} height={300} />
 

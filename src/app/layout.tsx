@@ -17,6 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <title>Nordicaps</title>
+      <meta name="description" content="Página para venta de gorras en Junin, Buenos Aires" />
       <body className={inter.className}>
         {children}
         <LenisScroller />

@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import TitleMagazine from './components/title-magazine'
+import { FaArrowDown } from "react-icons/fa6";
+import { principalFont } from '@/fonts';
 
 const HomePage = () => {
   return (
@@ -9,9 +11,12 @@ const HomePage = () => {
           <div className='z-10'>
             <TitleMagazine />
           </div>
-          <p className='text-white/90 text-2xl italic'>
+          <p className={`${principalFont.className} text-neutral-200 subtitle text-2xl italic`}>
             Las gorras con mas estilo de Junin, Buenos Aires.
           </p>
+          <i className='text-neutral-200 text-4xl absolute bottom-10'>
+            <FaArrowDown />
+          </i>
        </div>
     </main>
   )

@@ -12,10 +12,10 @@
     "@studio-freight/lenis": "1.0.29",
     "gsap": "3.12.3",
     "next": "14.0.3",
-    "nuka-carousel": "^7.0.0",
+    "nuka-carousel": "7.0.0",
     "react": "18",
     "react-dom": "18",
-    "react-icons": "^4.12.0"
+    "react-icons": "4.12.0"
   },
   "devDependencies": {
     "@types/node": "20",

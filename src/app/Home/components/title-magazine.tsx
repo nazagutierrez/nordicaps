@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
-import title1 from "../../assets/title-letters/1.png"
-import title2 from "../../assets/title-letters/2.png"
-import title3 from "../../assets/title-letters/3.png"
-import title4 from "../../assets/title-letters/4.png"
-import title5 from "../../assets/title-letters/5.png"
-import title6 from "../../assets/title-letters/6.png"
-import title7 from "../../assets/title-letters/7.png"
-import title8 from "../../assets/title-letters/8.png"
-import title9 from "../../assets/title-letters/9.png"
+import title1 from "../../assets/title-letters/1.webp"
+import title2 from "../../assets/title-letters/2.webp"
+import title3 from "../../assets/title-letters/3.webp"
+import title4 from "../../assets/title-letters/4.webp"
+import title5 from "../../assets/title-letters/5.webp"
+import title6 from "../../assets/title-letters/6.webp"
+import title7 from "../../assets/title-letters/7.webp"
+import title8 from "../../assets/title-letters/8.webp"
+import title9 from "../../assets/title-letters/9.webp"
 
 const TitleMagazine = () => {
   return (
