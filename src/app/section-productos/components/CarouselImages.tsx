@@ -1,12 +1,8 @@
 "use client";
 
-import React, { CSSProperties, ReactNode } from "react";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Carousel from "nuka-carousel";
-import imageCarousel1 from "../../assets/nordicaps-1.webp";
-import imageCarousel2 from "../../assets/nordicaps-2.webp";
-import imageCarousel3 from "../../assets/nordicaps-3.webp";
-import imageCarousel4 from "../../assets/nordicaps-4.webp";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 
 interface DefaultControlsConfig  {

@@ -10,9 +10,9 @@ import Link from "next/link";
 
 const productsTypes = ["gorras", "pilusos", "gorros"]
 
-const ProductsSection = () => {
+const SectionProductos = () => {
   return (
-    <section className={`${principalFont.className} h-screen text-white gap-20 bg-[#081608e8] flex flex-col justify-center items-center products-section`}>
+    <section className={`${principalFont.className} h-screen text-white bg-[#081608e8] flex flex-col py-20 justify-between items-center products-section`}>
       <div className="flex flex-col items-start w-full pl-32 gap-8">
         <h1 className={`${styles.fancy} text-5xl `}>Nuestros productos</h1>
         <h2 className="text-2xl pl-16">Con muchisimos diseños para elegir!</h2>
@@ -21,7 +21,7 @@ const ProductsSection = () => {
         {
           productsTypes.map((productType, index) => (
             <div key={index} className="w-[350px]">
-              <h3 className="text-xl pb-3">{productType}</h3>
+              <h3 className="text-2xl pb-3">{productType}</h3>
               <CarouselImages
                 images={[
                   imageCarousel1,
@@ -39,4 +39,4 @@ const ProductsSection = () => {
   );
 };
 
-export default ProductsSection;
+export default SectionProductos;
