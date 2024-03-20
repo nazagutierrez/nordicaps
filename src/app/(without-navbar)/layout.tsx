@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import { LenisScroller } from './scroll/lenis-scroller'
-import Navbar from './navbar'
+import '../globals.css'
+import SmoothScroll from './utils/scroll/lenis-scroller'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,9 +20,9 @@ export default function RootLayout({
       <title>Nordicaps</title>
       <meta name="description" content="Página para venta de gorras en Junin, Buenos Aires" />
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <LenisScroller />
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   )

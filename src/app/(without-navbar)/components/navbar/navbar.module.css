@@ -1,0 +1,33 @@
+.navcontainer:hover .navbtn i {
+  rotate: 180deg;
+  transition: all 0.5s ease-in-out;
+}
+.navcontainer .navbtn i {
+  rotate: 0deg;
+  transition: all 0.4s ease-in-out;
+}
+
+.navcontainer {
+  transition: all 0.4s ease-in-out;
+}
+.navcontainer:hover {
+  transition: all 0.5s ease-in-out;
+  translate: 80% 0px;
+}
+/* .navcontainer:hover .navbtn {
+    height: 25px;
+    width: 10px;
+    transition: all 0.4s ease-in-out;
+}
+.navcontainer .navbtn {
+    transition: all 0.4s ease-in-out;
+}
+
+.navcontainer {
+  transition: all 0.4s ease-in-out;
+}
+.navcontainer:hover {
+  transition: all 0.5s ease-in-out;
+  translate: -17px 0px;
+  width: 217px;
+} */
