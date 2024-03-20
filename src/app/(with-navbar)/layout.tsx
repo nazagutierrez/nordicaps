@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import SmoothScroll from '../(without-navbar)/utils/scroll/lenis-scroller'
-import Navbar from '../(without-navbar)/components/navbar'
+import '../globals.css'
+import SmoothScroll from '../utils/scroll/lenis-scroller'
+import Navbar from '../components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 

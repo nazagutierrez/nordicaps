@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import TitleMagazine from '../../(without-navbar)/components/Title-magazine'
+import TitleMagazine from '../../components/Title-magazine'
 import { FaArrowDown } from "react-icons/fa6";
 import { principalFont } from '@/fonts';
 
