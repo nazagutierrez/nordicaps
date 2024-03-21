@@ -1,5 +1,5 @@
 import { principalFont } from '@/fonts'
-import styles from "@/app/(without-navbar)/utils/highlight-titles/HighlightTitleBlue.module.css"
+import styles from "@/app/utils/highlight-titles/HighlightTitleBlue.module.css"
 import React from 'react'
 
 const SectionComoComprar = () => {
