@@ -27,16 +27,6 @@ const Navbar = () => {
        <i className='text-3xl text-white'><SlArrowRight /></i>
       </div>
     </div>
-      // <aside className={`w-[40px] top-1/2 -mt-[130px] h-[260px] flex rounded-e-xl fixed bg-[#1F3A1F]/80 z-20 ${styles.navcontainer}`}>
-      //     <div className='h-full flex flex-col gap-6 justify-center items-start overflow-hidden text-white'>
-      //       {ids.map((id, index) => (
-      //         <div className="py-2 px-3 flex justify-start items-center gap-4" key={index}>
-      //           <div className={`bg-neutral-900 w-3 h-3 rounded-full ${styles.navbtn}`}></div>
-      //           <button className={`w-[160px] text-xl tracking-wider text-start text-neutral-200 ${principalFont.className}`} onClick={() => lenis?.scrollTo(id)}>{navNames[index]}</button>
-      //         </div>
-      //       ))}
-      //     </div>
-      // </aside>
   )
 }
 
