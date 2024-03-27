@@ -1,29 +1,47 @@
-import Image from 'next/image'
-import React from 'react'
-import title1 from "@/assets/title-letters/1.webp"
-import title2 from "@/assets/title-letters/2.webp"
-import title3 from "@/assets/title-letters/3.webp"
-import title4 from "@/assets/title-letters/4.webp"
-import title5 from "@/assets/title-letters/5.webp"
-import title6 from "@/assets/title-letters/6.webp"
-import title7 from "@/assets/title-letters/7.webp"
-import title8 from "@/assets/title-letters/8.webp"
-import title9 from "@/assets/title-letters/9.webp"
+import Image from "next/image";
+import React from "react";
+import styles from "@/app/(with-navbar)/Home/home.module.css";
+import { n, o, r, d, i, c, a, p, s } from "@/assets/title-letters/imgExports";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 const TitleMagazine = () => {
-  return (
-    <div className='flex'>
-        <Image src={title1} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-        <Image src={title2} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-        <Image src={title3} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-        <Image src={title4} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-        <Image src={title5} alt="title" className='object-contain w-[30px] sm:w-[65px] xl:w-[90px]' unoptimized={true} width={0} height={0} />
-        <Image src={title6} alt="title" className='object-contain w-[25px] sm:w-[50px] xl:w-[75px]' unoptimized={true} width={0} height={0} />
-        <Image src={title7} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-        <Image src={title8} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-        <Image src={title9} alt="title" className='object-contain w-[37px] sm:w-[75px] xl:w-[120px]' unoptimized={true} width={0} height={0} />
-    </div>
-  )
-}
+  const TitleLetter = ({
+    img,
+    customClass,
+    animationType = 1,
+  }: {
+    img: StaticImport;
+    w?: string;
+    smW?: string;
+    xlW?: string;
+    customClass?: string;
+    animationType?: number;
+    aspect?: string;
+  }) => {
+    const animationStyle = animationType === 1 ? styles.homeLetterRight : styles.homeLetterLeft;
 
-export default TitleMagazine
+    return (
+      <Image
+        src={img}
+        alt="Letra del titulo"
+        className={`object-contain h-auto ${customClass} ${animationStyle}`}
+      />
+    );
+  };
+
+  return (
+    <div className="flex">
+      <TitleLetter img={n} customClass="w-[38px] sm:w-[75px] xl:w-[140px]" />
+      <TitleLetter img={o} customClass="w-[37px] sm:w-[75px] xl:w-[120px]" animationType={2} />
+      <TitleLetter img={r} customClass="w-[37px] sm:w-[75px] xl:w-[110px]" />
+      <TitleLetter img={d} customClass="w-[37px] sm:w-[75px] xl:w-[120px] -ms-6 -mr-3 -z-10" animationType={2} />
+      <TitleLetter img={i} customClass="w-[34px] sm:w-[65px] xl:w-[85px] -mx-3 skew-x-3" />
+      <TitleLetter img={c} customClass="w-[50px] sm:w-[75px] xl:w-[75px] -me-5 z-10" animationType={2} />
+      <TitleLetter img={a} customClass="w-[37px] sm:w-[75px] xl:w-[120px] -mx-2" />
+      <TitleLetter img={p} customClass="w-[37px] sm:w-[75px] xl:w-[120px]" animationType={2} />
+      <TitleLetter img={s} customClass="w-[37px] sm:w-[75px] xl:w-[120px] -ms-5" />
+    </div>
+  );
+};
+
+export default TitleMagazine;
