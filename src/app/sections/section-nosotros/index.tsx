@@ -1,15 +1,16 @@
 import { principalFont } from '@/fonts'
 import React from 'react'
+import styles from "@/app/utils/highlight-titles/HighlightTitleGreen.module.css"
 
-const SectionRedes = () => {
+const Nosotros = () => {
   return (
     <section id="redes" className={`${principalFont.className} h-screen text-white bg-[#081608e8] flex flex-col py-20 justify-between items-center products-section`}>
       <div className="flex flex-col items-start w-full pl-32 gap-8">
-        {/* <h1 className={`${styles.fancy} text-5xl `}>Nuestros productos</h1> */}
-        <h2 className="text-2xl pl-16">Con muchisimos diseños para elegir!</h2>
+        <h1 className={`${styles.fancy} text-5xl `}>Nosotros</h1>
+        <h1 className={`${styles.fancy} text-5xl `}>Redes</h1>
       </div>
     </section>
   )
 }
 
-export default SectionRedes
+export default Nosotros
