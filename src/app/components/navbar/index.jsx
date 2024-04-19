@@ -9,8 +9,8 @@ import highlighter from "@/app/utils/highlight-titles/HighlightTitleBlue.module.
 
 const Navbar = () => {
   const lenis = useLenis(({ scroll }) => {});
-  const ids = ["#inicio", "#nuestros-productos", "#como-comprar", "#redes"];
-  const navNames = ["Inicio", "Nuestros productos", "Como comprar", "Redes"];
+  const ids = ["#inicio", "#nuestros-productos", "#como-comprar", "#nosotros"];
+  const navNames = ["Inicio", "Nuestros productos", "Como comprar", "Nosotros"];
 
   return (
     <div
