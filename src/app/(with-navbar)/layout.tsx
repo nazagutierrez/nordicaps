@@ -3,12 +3,14 @@ import { Inter } from 'next/font/google'
 import '../globals.css'
 import SmoothScroll from '../utils/scroll/lenis-scroller'
 import Navbar from '../components/navbar'
+import Favicon from '/public/favicon.ico';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Venta de gorras en Junin, Buenos Aires',
   description: 'Pagina de venta de gorras marca flutcompany de alta calidad en Junin, Buenos Aires',
+  icons: [{ rel: 'icon', url: Favicon.src }],
 }
 
 export default function RootLayout({
