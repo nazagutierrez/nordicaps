@@ -38,7 +38,7 @@
 .arrow-animation {
   animation: reveal linear both;
   animation-timeline: view();
-  animation-range: entry 1% cover 40%;
+  animation-range: entry 20% cover 25%;
 }
 
 @keyframes reveal {
