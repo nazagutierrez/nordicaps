@@ -4,7 +4,7 @@ import React from "react";
 import Atropos from "atropos/react";
 import "atropos/css";
 import Image from "next/image";
-import iphoneImg from "../../assets/iphone/iphone-view.png";
+import iphoneImg from "../../assets/iphone/iphone-view2.avif";
 
 export default function Card3d() {
   return (
@@ -13,9 +13,9 @@ export default function Card3d() {
         shadow={true}
         shadowOffset={150}
         highlight={false}
-        rotateXMax={25}
-        rotateYMax={25}
-        activeOffset={100}
+        rotateXMax={15}
+        rotateYMax={15}
+        activeOffset={10}
         className="my-atropos shadow-neutral-100"
       >
         <Image
