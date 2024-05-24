@@ -1,9 +1,9 @@
 import React from "react";
 import CarouselImages from "../../components/CarouselImages";
-import imageCarousel2 from "@/assets/nordicaps-2.webp";
-import imageCarousel3 from "@/assets/nordicaps-3.webp";
-import imageCarousel1 from "@/assets/nordicaps-1.webp";
-import imageCarousel4 from "@/assets/nordicaps-4.webp";
+import imageCarousel2 from "@/assets/nordicaps-2.avif";
+import imageCarousel3 from "@/assets/nordicaps-3.avif";
+import imageCarousel1 from "@/assets/nordicaps-1.avif";
+import imageCarousel4 from "@/assets/nordicaps-4.avif";
 import { principalFont } from '../../../fonts/index'
 import styles from "@/app/utils/highlight-titles/HighlightTitleGreen.module.css";
 import Link from "next/link";
