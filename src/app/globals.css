@@ -41,6 +41,15 @@
   animation-range: entry 20% cover 25%;
 }
 
+.atropos-inner {
+  width: 400px !important;
+  height: 670px !important;
+  align-content: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 @keyframes reveal {
   from {
     translate: -100px 0;

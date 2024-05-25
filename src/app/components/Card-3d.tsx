@@ -8,15 +8,15 @@ import iphoneImg from "../../assets/iphone/iphone-view2.avif";
 
 export default function Card3d() {
   return (
-    <div>
+    <div className="pr-36">
       <Atropos
         shadow={true}
-        shadowOffset={150}
         highlight={false}
-        rotateXMax={15}
-        rotateYMax={15}
-        activeOffset={10}
-        className="my-atropos shadow-neutral-100"
+        shadowOffset={150}
+        rotateXMax={10}
+        rotateYMax={10}
+        activeOffset={15}
+        className="my-atropos shadow-neutral-100 flex items-center justify-center"
       >
         <Image
           src={iphoneImg}
