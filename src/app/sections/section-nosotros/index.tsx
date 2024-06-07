@@ -10,8 +10,8 @@ const Nosotros = () => {
       className={`${principalFont.className} h-screen text-white bg-[#081608e8] flex px-32 py-20 justify-between items-center products-section`}
     >
       <div className="h-full flex flex-col items-start">
-        <h1 className={`${styles.fancy} w-fit mb-10 text-5xl`}>Nosotros</h1>
-        <article className="flex flex-col h-full justify-center text-[1.7rem] gap-y-7 max-w-xl">
+        <h1 className={`${styles.fancy} w-fit mb-20 text-5xl`}>Nosotros</h1>
+        <article className="flex flex-col h-full justify-start text-[1.6rem] gap-y-7 max-w-xl">
           <h3 className="text-4xl">Somos nordicaps</h3>
           <p>
             un emprendimiento de gorras ubicado en Junin, Buenos Aires estamos
