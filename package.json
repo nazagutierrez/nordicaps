@@ -11,6 +11,7 @@
   "dependencies": {
     "@studio-freight/react-lenis": "0.0.46",
     "atropos": "2.0.2",
+    "gsap": "^3.12.7",
     "next": "14.1.4",
     "nuka-carousel": "7.0.0",
     "react": "18.2.0",
