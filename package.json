@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studio-freight/react-lenis": "0.0.46",
     "atropos": "2.0.2",
     "gsap": "^3.12.7",
-    "next": "14.1.4",
-    "nuka-carousel": "7.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "lenis": "^1.3.1",
+    "next": "15.3.1",
+    "nuka-carousel": "8.2.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "react-icons": "5.0.1"
   },
   "devDependencies": {
