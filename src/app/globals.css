@@ -2,37 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components  {
+  nav-group-hover {
+    @apply opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-200;
+  }
+}
+
 .home-section {
   width: 100%;
   height: 100vh;
-  background: url("../assets/bg-nordicaps.avif");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-color: #151b15;
+  background-image: url("../assets/noise-nordicaps.png");
 }
 
-.home-section::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.6);
+.cap-svg path {
+  fill: transparent;
+  stroke: white;
+  filter: drop-shadow(0px 0px 10px white);
+  stroke-width: 3px;
+  stroke-dasharray: 200;
+  animation: capAnimation 3s ease-in-out 1 forwards, capAnimationGlow 3s infinite steps(1);
+}
+
+@keyframes capAnimation {
+  100% {
+    stroke-dasharray: 900;
+  }
+}
+
+@keyframes capAnimationGlow {
+  0% { filter: drop-shadow(0px 0px 10px rgb(73, 61, 61)); }
+  5% { filter: drop-shadow(0px 0px 15px rgb(63, 209, 5)); }
+  10% { filter: drop-shadow(0px 0px 10px rgb(73, 61, 61)); }
+  20% { filter: drop-shadow(0px 0px 15px rgb(63, 209, 5)); }
+  70% { filter: drop-shadow(0px 0px 10px rgb(73, 61, 61)); }
+  75% { filter: drop-shadow(0px 0px 15px rgb(63, 209, 5)); }
+  100% { filter: drop-shadow(0px 0px 10px rgb(73, 61, 61)); }
 }
 
 .products-section {
-    background-image:  radial-gradient(#1f3a1f 1.6px, transparent 1.6px), radial-gradient(#1f3a1f 1.6px, #1E2B1E 1.6px);
-    background-size: 64px 64px;
-    background-position: 0 0,32px 32px;
-    animation: animatedBackground 3s linear infinite;
+  background-color: #053b05;
+  background-image: url("../assets/noise-nordicaps.png");
 }
 .como-comprar-section {
-  background-image:  radial-gradient(#1E2B1E 2px, transparent 2px), radial-gradient(#1E2B1E 2px, #1f3a1f 2px);
-  background-size: 80px 80px;
-  background-position: 0 0,40px 40px;
-  animation: animatedBackground 3s linear infinite;
+  background-color: #273a28;
+  background-image: url("../assets/noise-nordicaps.png");
+}
+
+.animation-gorras {
+  animation: reveal-card linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 20%;
+}
+.animation-pilusos {
+  animation: reveal-card linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+.animation-gorros {
+  animation: reveal-card linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
 }
 
 .arrow-animation {
@@ -52,21 +82,22 @@
 
 @keyframes reveal {
   from {
-    translate: -100px 0;
+    translate: -30px 0;
     opacity: 0;
   }
   to {
-   opacity: 1;
-   translate: 0 0;
+    opacity: 1;
+    translate: 0 0;
   }
 }
-
-@keyframes animatedBackground {
+@keyframes reveal-card {
   from {
-    background-position: -30% -30%;
+    translate: 0 50px;
+    opacity: 0;
   }
   to {
-    background-position: 30% 100%;
+    opacity: 1;
+    translate: 0 0;
   }
 }
 
