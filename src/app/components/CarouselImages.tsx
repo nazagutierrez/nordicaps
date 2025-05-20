@@ -1,40 +1,36 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import Carousel from "nuka-carousel";
-import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
+import React, { useCallback } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import Image, { StaticImageData } from 'next/image'
+import Autoplay from 'embla-carousel-autoplay'
 
-interface DefaultControlsConfig  {
-    nextButtonText?: React.ReactNode
-    nextButtonClassName?: string
-    prevButtonText?: React.ReactNode
-    prevButtonClassName?: string
-    pagingDotsClassName?: string
-    pagingDotsContainerClassName?: string
-  }
-
-  const defaultControlsObj:DefaultControlsConfig = {
-    nextButtonText: <MdArrowForwardIos />,
-    nextButtonClassName: "rounded-full text-xl mx-2",
-    
-    prevButtonText: <MdArrowBackIosNew />,
-    prevButtonClassName: "rounded-full text-xl mx-2",
-    
-    pagingDotsClassName: "mx-0.5 px-2 py-1",
-    pagingDotsContainerClassName: "bg-neutral-400/70 rounded-full ",
-  }
-
-const CarouselImages = ({images}: {images:StaticImageData[]}) => {
+export default function CarouselImages({ images }: { images: StaticImageData[] }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay({ delay: 2500 })])
   
-    return (
-    <Carousel autoplay className="rounded-md" defaultControlsConfig={defaultControlsObj} wrapAround={true} >
-      {images.map((image, index) => (
-            <Image key={index} src={image} className="object-cover h-full w-[350px]" alt="Carousel image" width={300} height={300} />
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
 
-      ))}      
-    </Carousel>
-  );
-};
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
-export default CarouselImages;
+  return (
+    <div className="overflow-hidden rounded-md" ref={emblaRef}>
+      <div className="flex">
+        {images.map((image, index) => (
+          <div key={index} className="flex-[0_0_100%] min-w-0 ">
+            <Image src={image} className="object-cover h-full w-[350px]" alt="Carousel image" width={300} height={300} />
+          </div>
+        ))}
+      </div>
+        <button className="text-2xl embla__prev text-white bg-neutral-900/30 rounded-full w-9 h-14 absolute top-[50%] left-0" onClick={scrollPrev}>
+        {"<"}
+      </button>
+      <button className="text-2xl embla__next text-white bg-neutral-900/30 rounded-full w-9 h-14 absolute top-[50%] right-0" onClick={scrollNext}>
+        {">"}
+      </button>
+    </div>
+  )
+}
