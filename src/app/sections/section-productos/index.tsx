@@ -12,7 +12,7 @@ const productsTypes = ["gorras", "pilusos", "gorros"]
 
 const SectionProductos = () => {
   return (
-    <section id="nuestros-productos" className={`${principalFont.className} h-screen text-white bg-[#081608e8] flex flex-col py-20 justify-between items-center products-section`}>
+    <section id="nuestros-productos" className={`${principalFont.className} h-screen text-white bg-[#081608e8] flex flex-col py-20 justify-between items-center products-section relative z-20`}>
       <div className="flex flex-col items-start w-full pl-32 gap-8">
         <h1 className={`${styles.fancy} text-5xl `}>Nuestros productos</h1>
         <h2 className="text-2xl pl-16">Con muchisimos diseños para elegir!</h2>
@@ -20,7 +20,7 @@ const SectionProductos = () => {
       <div className="flex justify-center items-center gap-32">
         {
           productsTypes.map((productType, index) => (
-            <div key={index} className="w-[350px]">
+            <div key={index} className={`w-[350px] animation-${productType}`}>
               <h3 className="text-2xl pb-3">{productType}</h3>
               <CarouselImages
                 images={[

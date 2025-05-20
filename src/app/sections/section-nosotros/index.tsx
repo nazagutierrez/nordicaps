@@ -7,7 +7,7 @@ const Nosotros = () => {
   return (
     <section
       id="nosotros"
-      className={`${principalFont.className} h-screen text-white bg-[#081608e8] flex px-32 py-20 justify-between items-center products-section`}
+      className={`${principalFont.className} py-20 h-screen text-white bg-[#081608e8] flex px-32 justify-between items-center products-section`}
     >
       <div className="h-full flex flex-col items-start">
         <h1 className={`${styles.fancy} w-fit mb-20 text-5xl`}>Nosotros</h1>
@@ -26,7 +26,7 @@ const Nosotros = () => {
             sol, sino que también te da un estilo unico.
           </p>
           <p>¡Gracias por elegirnos como parte de tu outfit!</p>
-        </article>
+        </article>      
       </div>
       <Card3d />
     </section>
