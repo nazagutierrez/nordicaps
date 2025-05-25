@@ -47,36 +47,43 @@ const SectionComoComprar = () => {
     <section
       ref={sectionRef}
       id="como-comprar"
-      className={`${principalFont.className} relative h-screen text-white gap-20 bg-[#183b18e8] flex flex-col py-20 items-center como-comprar-section`}
+      className={`${principalFont.className} relative h-screen text-white gap-20 flex flex-col py-20 items-center como-comprar-section`}
     >
       <div className="flex flex-col items-start w-full pl-32 gap-8">
         <h1
           className={`${highlightBLue.fancyNoHover} text-5xl hover:opacity-100`}
         >
-          Como comprar
+          ¿Qué nos hace diferentes?
         </h1>
         <h2 className="text-2xl pl-16">
-          Segui estos pasos para poder llevarte tu Nordicap!
+          Te resumimos por que elegirnos en solo 5 puntos
         </h2>
-        <Arrow propRef={sectionRef} className="rotate-[200deg] scale-y-[-1] top-72 left-[800px]" delay={0.2} />
-        <Arrow propRef={sectionRef} className="rotate-[-10deg] scale-y-[-1] top-[440px] left-[890px]" delay={0.9} />
-        <Arrow propRef={sectionRef} className="rotate-[160deg] top-[580px] left-[890px]" delay={1.5} />
-        <div data-rotate="-12" className='absolute title-como-comprar w-fit h-fit top-72 left-80 text-black border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
-          <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
-          <h2>Mirá nuestro catálogo</h2>
+        <div className="text-neutral-900/90">
+          <Arrow type="straight" w={236} h={66} propRef={sectionRef} className="rotate-[200deg] scale-y-[-1] top-[360px] left-[480px]" delay={0.2} />
+          <Arrow type="straight" w={236} h={66} propRef={sectionRef} className="rotate-[200deg] scale-y-[-1] top-[360px] right-[480px]" delay={0.4} />
+          <Arrow type="circle" w={250} h={60} propRef={sectionRef} className="rotate-[140deg] top-[520px] right-6" delay={0.7} />
+          <Arrow type="straight" w={220} h={60} propRef={sectionRef} className="rotate-[20deg] scale-y-[-1] top-[660px] left-[780px]" delay={1} />
+          <div data-rotate="-12" className='absolute title-como-comprar w-fit h-fit top-[360px] left-28 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+            <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
+            <h2>La mejor calidad</h2>
+          </div>
+          <div data-rotate="-6" className='absolute title-como-comprar w-fit h-fit top-[360px] right-[740px] border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] rotate-12 flex flex-col items-center justify-center'>
+            <Image src={pin} className="w-7 h-7 rotate-[60deg] mb-2" alt="Como comprar" width={0} height={0} />
+            <h2>Los mejores precios</h2>
+          </div>
+          <div data-rotate="3" className='absolute title-como-comprar w-fit h-fit top-[360px] right-24 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+            <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
+            <h2>Diseños originales</h2>
+          </div>
+          <div data-rotate="3" className='absolute title-como-comprar w-fit h-fit top-[620px] left-80 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+            <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
+            <h2>Envíos rápidos a domicilio</h2>
+          </div>
+          <div data-rotate="-6" className='absolute title-como-comprar w-fit h-fit top-[610px] right-56 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+            <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
+            <h2>Stock limitado: exclusividad garantizada</h2>
+          </div> 
         </div>
-        <div data-rotate="-6" className='absolute title-como-comprar w-fit h-fit top-72 right-96 text-black border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] rotate-12 flex flex-col items-center justify-center'>
-          <Image src={pin} className="w-7 h-7 rotate-[60deg] mb-2" alt="Como comprar" width={0} height={0} />
-          <h2>Elegí tu nordicap</h2>
-        </div>
-        <div data-rotate="3" className='absolute title-como-comprar w-fit h-fit top-[500px] left-72 text-black border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
-          <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
-          <h2>Contactanos para realizar tu pedido</h2>
-        </div>
-        <div data-rotate="6" className='absolute title-como-comprar w-fit h-fit top-[520px] right-96 text-black border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
-          <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
-          <h2>Y a disfrutarla!</h2>
-        </div> 
       </div>
     </section>
   );
