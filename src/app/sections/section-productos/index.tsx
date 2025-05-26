@@ -34,7 +34,11 @@ const SectionProductos = () => {
           ))
         }
       </div>
-      <Link href="/productos" className="text-2xl bg-green-800 text-center px-6 py-1 hover:opacity-70 transition-all rounded-md">Ver mas</Link>
+      <div className="group">
+        <Link href="/productos" className="text-2xl px-7 py-1 button border-b bg-black/15 rounded-t hover:border-green-300/70 shadow-[0px_25px_40px_-6px_#738d6965] hover:shadow-[0px_25px_40px_-6px_#cccccc60] transition-all border-white/40">
+          <span>CATÁLOGO</span>
+        </Link>
+      </div>
     </section>
   );
 };
