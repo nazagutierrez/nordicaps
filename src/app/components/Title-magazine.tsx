@@ -30,7 +30,7 @@ const TitleMagazine = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex select-none pointer-events-none">
       <TitleLetter img={n} customClass="w-[38px] sm:w-[75px] xl:w-[140px]" />
       <TitleLetter img={o} customClass="w-[37px] sm:w-[75px] xl:w-[120px]" animationType={2} />
       <TitleLetter img={r} customClass="w-[37px] sm:w-[75px] xl:w-[110px]" />
