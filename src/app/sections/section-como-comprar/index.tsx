@@ -47,44 +47,56 @@ const SectionComoComprar = () => {
     <section
       ref={sectionRef}
       id="como-comprar"
-      className={`${principalFont.className} relative h-screen text-white gap-20 flex flex-col py-20 items-center como-comprar-section`}
+      className={`${principalFont.className} relative h-screen text-white gap-20 flex flex-col justify-between py-20 items-center como-comprar-section`}
     >
-      <div className="flex flex-col items-start w-full pl-32 gap-8">
-        <h1
-          className={`${highlightBLue.fancyNoHover} text-5xl hover:opacity-100`}
-        >
-          ¿Qué nos hace diferentes?
-        </h1>
-        <h2 className="text-2xl pl-16">
-          Te resumimos por que elegirnos en solo 5 puntos
-        </h2>
-        <div className="text-neutral-900/90">
-          <Arrow type="straight" w={236} h={66} propRef={sectionRef} className="rotate-[200deg] scale-y-[-1] top-[360px] left-[480px]" delay={0.2} />
-          <Arrow type="straight" w={236} h={66} propRef={sectionRef} className="rotate-[200deg] scale-y-[-1] top-[360px] right-[480px]" delay={0.4} />
-          <Arrow type="circle" w={250} h={60} propRef={sectionRef} className="rotate-[140deg] top-[520px] right-6" delay={0.7} />
-          <Arrow type="straight" w={220} h={60} propRef={sectionRef} className="rotate-[20deg] scale-y-[-1] top-[660px] left-[780px]" delay={1} />
-          <div data-rotate="-12" className='absolute title-como-comprar w-fit h-fit top-[360px] left-28 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+      <div className="flex flex-col items-start w-full gap-8">
+        <div className="pl-32">
+          <h1
+            className={`${highlightBLue.fancyNoHover} mb-8 text-5xl hover:opacity-100`}
+          >
+            ¿Qué nos hace diferentes?
+          </h1>
+          <h2 className="text-2xl pl-16">
+            Te resumimos por que elegirnos en solo 5 puntos
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-10 grid-rows-6 items-center text-4xl justify-items-center gap-2 mx-20 text-neutral-900/90">
+          <div data-rotate="-12" className='col-span-2 row-span-3 title-como-comprar w-[290px] h-fit border px-10 pb-4 border-gray-400 bg-[#ebebeb] flex flex-col items-center justify-center'>
             <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
             <h2>La mejor calidad</h2>
           </div>
-          <div data-rotate="-6" className='absolute title-como-comprar w-fit h-fit top-[360px] right-[740px] border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] rotate-12 flex flex-col items-center justify-center'>
-            <Image src={pin} className="w-7 h-7 rotate-[60deg] mb-2" alt="Como comprar" width={0} height={0} />
+          
+          <Arrow type="straight" h={66} className="col-span-2 col-start-3 row-start-2 w-[70%] rotate-[200deg] scale-y-[-1]" propRef={sectionRef} delay={0.2} />
+          
+          <div data-rotate="-12" className='col-span-2 row-span-3 col-start-5 row-start-1 title-como-comprar w-[330px] h-fit border px-10 pb-4 border-gray-400 bg-[#ebebeb] flex flex-col items-center justify-center'>
+            <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
             <h2>Los mejores precios</h2>
           </div>
-          <div data-rotate="3" className='absolute title-como-comprar w-fit h-fit top-[360px] right-24 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+          
+          <Arrow type="straight" h={66} propRef={sectionRef} className="col-span-2 col-start-7 row-start-2 w-[70%] rotate-[200deg] scale-y-[-1]" delay={0.4} />
+          
+          <div data-rotate="-12" className='col-span-2 row-span-3 col-start-9 row-start-1 title-como-comprar w-[310px] h-fit border px-10 pb-4 border-gray-400 bg-[#ebebeb] flex flex-col items-center justify-center'>
             <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
             <h2>Diseños originales</h2>
           </div>
-          <div data-rotate="3" className='absolute title-como-comprar w-fit h-fit top-[620px] left-80 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+          
+          
+          <div data-rotate="-8" className='col-span-1 col-start-3 row-span-3 row-start-5 title-como-comprar w-[400px] h-fit border px-10 pb-4 border-gray-400 bg-[#ebebeb] flex flex-col items-center justify-center'>
             <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
             <h2>Envíos rápidos a domicilio</h2>
           </div>
-          <div data-rotate="-6" className='absolute title-como-comprar w-fit h-fit top-[610px] right-56 border px-16 pb-4 text-4xl border-gray-400 bg-[#ebebeb] -rotate-12 flex flex-col items-center justify-center'>
+          <Arrow type="straight" h={60} propRef={sectionRef} className="col-span-1 col-start-5 row-start-6 w-[120%] rotate-[30deg] scale-y-[-1]" delay={0.7} />
+          
+          <div data-rotate="-10" className='col-span-4 row-span-3 col-start-6 row-start-5 title-como-comprar w-[580px] h-fit border px-10 pb-4 border-gray-400 bg-[#ebebeb] flex flex-col items-center justify-center'>
             <Image src={pin} className="w-7 h-7 rotate-[75deg] mb-2" alt="Como comprar" width={0} height={0} />
             <h2>Stock limitado: exclusividad garantizada</h2>
-          </div> 
+          </div>
+          
+          <Arrow type="circle" h={60} propRef={sectionRef} className="col-span-1 col-start-10 row-start-4 w-full rotate-[140deg]" delay={1} />
         </div>
       </div>
+      <h2 className="text-lg">Lo tenemos todo!</h2>
     </section>
   );
 };
