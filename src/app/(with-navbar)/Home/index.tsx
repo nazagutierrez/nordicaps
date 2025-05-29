@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import TitleMagazine from '../../components/Title-magazine'
-import { FaArrowDown } from "react-icons/fa6";
+import { IoIosArrowRoundDown } from "react-icons/io";
 import { principalFont } from '@/fonts';
 import styles from "./home.module.css"
 import gsap from "gsap";
@@ -61,7 +61,7 @@ const HomePage = () => {
             Las gorras con mas estilo de Junin, Buenos Aires.
           </p>
           <i className={`text-neutral-200 text-4xl absolute bottom-10 ${styles.homeArrow}`}>
-            <FaArrowDown />
+            <IoIosArrowRoundDown />
           </i>
           <HeroButton />
        </div>
