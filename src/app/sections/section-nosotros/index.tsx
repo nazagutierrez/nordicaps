@@ -3,9 +3,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import styles from "@/app/utils/highlight-titles/HighlightTitleGreen.module.css";
-import image from "@/assets/nordicaps-3.avif";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
+import 'swiper/swiper-bundle.css';
+import image from "../../../assets/nordicaps-verde.webp"
+import Image from "next/image";
 
 export default function Nosotros() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -81,7 +84,7 @@ export default function Nosotros() {
       <div className="absolute top-[12%] left-0 w-full h-2/3 products-section -skew-y-[10deg] shadow-[0_0_35px_5px_rgba(0,0,0,0.25)]"></div>
 
       <div className="container relative mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2  w-full items-center">
           <div>
             <h1
               ref={headingRef}
@@ -109,18 +112,32 @@ export default function Nosotros() {
             </div>
           </div>
 
-          <div ref={imageRef} className="relative">
-            <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <Image
-                src={image}
-                alt="Cap crafting process"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-neutral-900 rounded-full opacity-50 blur-2xl"></div>
-            <div className="absolute -top-10 -right-10 h-40 w-40 bg-neutral-900 rounded-full opacity-50 blur-2xl"></div>
+          <div ref={imageRef} className="relative h-[400px] w-[70%] rounded-lg shadow-xl transform rotate-3 hover:!rotate-2 transition-transform mx-auto duration-500">
+            <Swiper
+              effect="cards"
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="h-full w-full sm:text-base text-sm rounded"
+            >
+              <SwiperSlide className="rounded">
+                <Image src={image} alt="slider image" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded">
+                <Image src={image} alt="slider image" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded">
+                <Image src={image} alt="slider image" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded">
+                <Image src={image} alt="slider image" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded">
+                <Image src={image} alt="slider image" />
+              </SwiperSlide>
+            </Swiper>
           </div>
+          <div className="absolute top-1/3 right-1/3 h-40 w-40 bg-white/40 rounded-full opacity-50 blur-2xl"></div>
+          <div className="absolute -top-10 right-20 h-40 w-40 bg-white/40 rounded-full opacity-50 blur-2xl"></div>
         </div>
 
         <div
