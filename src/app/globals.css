@@ -12,6 +12,12 @@
   width: 100%;
   height: 100vh;
   background-color: #151b15;
+  /* background-image: url("../assets/noise-nordicaps.png"); */
+}
+
+.noise {
+  mix-blend-mode: difference;
+  background-size: 140px 140px;
   background-image: url("../assets/noise-nordicaps.png");
 }
 

@@ -53,6 +53,7 @@ const HomePage = () => {
 
   return (
     <main ref={sectionRef} id='inicio' className="overflow-hidden relative home-section h-screen flex justify-center bg-neutral-800 items-center">
+       <div className='absolute inset-0 noise'></div>
        <div className='z-10 flex flex-col items-center gap-5' >
           <div ref={titleRef}>
             <TitleMagazine />
