@@ -49,9 +49,7 @@ export default function Nosotros() {
       .from(
         imageRef.current,
         {
-          scale: 0.8,
           opacity: 0,
-          duration: 1,
           ease: "power3.out",
         },
         "-=0.6"
@@ -112,7 +110,8 @@ export default function Nosotros() {
             </div>
           </div>
 
-          <div ref={imageRef} className="relative h-[400px] w-[70%] rounded-lg shadow-xl transform rotate-3 hover:!rotate-2 transition-transform mx-auto duration-500">
+            <div className="absolute w-[550px] h-[450px] rounded-full right-32 bg-black/20 blur-2xl"></div>
+          <div ref={imageRef} className="relative h-[400px] w-[70%] rounded-lg rotate-3 hover:!rotate-0 transition-transform mx-auto">
             <Swiper
               effect="cards"
               grabCursor={true}
@@ -136,8 +135,6 @@ export default function Nosotros() {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className="absolute top-1/3 right-1/3 h-40 w-40 bg-white/40 rounded-full opacity-50 blur-2xl"></div>
-          <div className="absolute -top-10 right-20 h-40 w-40 bg-white/40 rounded-full opacity-50 blur-2xl"></div>
         </div>
 
         <div
