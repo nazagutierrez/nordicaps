@@ -47,10 +47,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         {/* Product labels */}
         <div className="absolute top-0 left-0 p-2 flex flex-col gap-1">
           {product.isNew && (
-            <span className="bg-blue-600 text-white text-xs font-bold uppercase px-2 py-1 rounded">New</span>
+            <span className="bg-blue-600 text-white text-xs font-bold uppercase px-2 py-1 rounded">Nuevo</span>
           )}
           {product.isBestseller && (
-            <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-1 rounded">Bestseller</span>
+            <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-1 rounded">MAS VENDIDO</span>
           )}
         </div>
         

@@ -8,7 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import 'swiper/swiper-bundle.css';
 import image from "../../../assets/nordicaps-verde.webp"
+import instagramImage from "../../../assets/instagram.png"
+import whatsappImage from "../../../assets/whatsapp.png"
 import Image from "next/image";
+import Link from "next/link";
+import CountUp from "@/app/ui/CountUp";
 
 export default function Nosotros() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -17,61 +21,34 @@ export default function Nosotros() {
   const imageRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger);
 
+  const ctx = gsap.context(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 70%",
         end: "bottom 20%",
         toggleActions: "play none none reverse",
+        markers: true,
       },
     });
 
     timeline
-      .from(headingRef.current, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-      })
-      .from(
-        textRef.current,
-        {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-        },
-        "-=0.4"
-      )
-      .from(
-        imageRef.current,
-        {
-          opacity: 0,
-          ease: "power3.out",
-        },
-        "-=0.6"
-      )
-      .from(
-        statsRef.current?.children || [],
-        {
-          y: 20,
-          opacity: 0,
-          duration: 0.6,
-          stagger: 0.2,
-          ease: "power3.out",
-        },
+      .from(headingRef.current, { y: 50, opacity: 0, duration: 0.8, ease: "power3.out" })
+      .from(textRef.current, { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.4")
+      .from(imageRef.current, { opacity: 0, ease: "power3.out" }, "-=0.6")
+      .fromTo(
+        gsap.utils.toArray(statsRef.current?.children || []),
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power2.out" },
         "-=0.8"
       );
+  }, sectionRef);
 
-    return () => {
-      if (timeline.scrollTrigger) {
-        timeline.scrollTrigger.kill();
-      }
-    };
-  }, []);
+  return () => ctx.revert();
+}, []);
 
   return (
     <section
@@ -101,7 +78,7 @@ export default function Nosotros() {
               <p>
                 Nuestro proyecto nació del deseo de romper con lo convencional y
                 ofrecer algo verdaderamente único. Cada una de nuestras gorras
-                tiene un diseño innovador, de muy buena calidad y muy fachero 😎
+                tiene un diseño innovador, de muy buena calidad y muy fachero.
               </p>
               <p>
                 Elegí nordicaps y llevate una gorra que no solo te protege del
@@ -142,30 +119,44 @@ export default function Nosotros() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center"
         >
           {[
-            { number: "500+", label: "Gorras vendidas" },
-            { number: "50+", label: "Diseños únicos" },
-            { number: "10/10", label: "Calidad" },
-            { number: "100%", label: "Satisfacción" },
+            { symbol: "+", number: "500", label: "Gorras vendidas" },
+            { symbol: "+", number: "50", label: "Diseños únicos" },
+            { symbol: "/10", number: "10", label: "Calidad" },
+            { symbol: "%", number: "94", label: "Clientes satisfechos" },
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-green-50/90 p-6 rounded-lg shadow-md border-t-4 border-emerald-900"
-            >
-              <div className="text-3xl font-bold text-neutral-900">
-                {stat.number}
+              className="px-2.5 py-5 button como-comprar-section border border-green-800/80 rounded-lg shadow-[0px_5px_55px_-10px_#73956640]"            >
+              <div className="text-3xl font-bold text-neutral-300">
+                {stat.symbol === "+" && "+"}
+                <CountUp
+                  from={0}
+                  to={Number(stat.number)}
+                  separator=","
+                  direction="up"
+                  duration={1.5}
+                  className="count-up-text"
+                  />
+                {stat.symbol === "/10" && "/10"}
+                {stat.symbol === "%" && "%"}
               </div>
-              <div className="text-gray-600 mt-1">{stat.label}</div>
+              <div className="text-neutral-300 mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center gap-5 flex justify-center items-center">
-          <button className="bg-green-950 border border-green-200/60 text-white px-6 py-3 rounded-full hover:border-green-600/70 transition-colors">
-            <span>Instagram</span>
-          </button>
-          <button className="bg-green-950 border border-green-200/60 text-white px-6 py-3 rounded-full hover:border-green-600/70 transition-colors">
-            <span>Whatsapp</span>
-          </button>
+          <div className="group flex">
+            <Link href="/productos" className="text-2xl px-2.5 py-1.5 button bg-black/15 rounded-lg hover:border-green-300/70 shadow-[0px_25px_35px_0px_#89629291] hover:shadow-[0px_25px_40px_2px_#ad5fbea8] transition-all border-white/40">
+              <span><Image src={instagramImage} className="brightness-[0.85]" alt="whatsapp" width={40} height={50} /></span>
+            </Link>
+          </div>
+
+          <div className="group flex">
+            <Link href="/productos" className="text-2xl px-2.5 py-1.5 button bg-black/15 rounded-lg hover:border-green-300/70 shadow-[0px_25px_35px_0px_#70926265] hover:shadow-[0px_25px_40px_2px_#6fac5765] transition-all border-white/40">
+              <span><Image src={whatsappImage} className="text-red-400" alt="whatsapp" width={40} height={50} /></span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

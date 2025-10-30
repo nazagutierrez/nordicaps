@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "@/app/(with-navbar)/Home/home.module.css";
+import styles from "@/app/Home/home.module.css";
 import { n, o, r, d, i, c, a, p, s } from "@/assets/title-letters/imgExports";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 

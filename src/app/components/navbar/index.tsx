@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className='h-1 w-1 -translate-x-32 group-hover:translate-x-[30px] group-hover:opacity-100 opacity-0 transition-all duration-[250ms] rounded-full bg-green-700 mx-3' aria-hidden></div>
           <button onClick={() => lenis?.scrollTo("#nuestros-productos")} className='hover:text-green-200/70 hover:duration-200 -translate-x-40 group-hover:opacity-100 group-hover:translate-x-[40px] transition-all duration-300 opacity-0'>Productos</button>	
           <div className='h-1 w-1 -translate-x-52 group-hover:translate-x-[50px] group-hover:opacity-100 opacity-0 transition-all duration-[400ms] rounded-full bg-green-700 mx-3' aria-hidden></div>
-          <button onClick={() => lenis?.scrollTo("#como-comprar")} className='hover:text-green-200/70 hover:duration-200 -translate-x-60 group-hover:opacity-100 group-hover:translate-x-[60px] transition-all duration-500 opacity-0'>Comprar</button>
+          <button onClick={() => lenis?.scrollTo("#como-comprar")} className='hover:text-green-200/70 hover:duration-200 -translate-x-60 group-hover:opacity-100 group-hover:translate-x-[60px] transition-all duration-500 opacity-0'>Clientes</button>
           <div className='h-1 w-1 -translate-x-72 group-hover:translate-x-[70px] group-hover:opacity-100 opacity-0 transition-all duration-[600ms] rounded-full bg-green-700 mx-3' aria-hidden></div>
           <button onClick={() => lenis?.scrollTo("#nosotros")}  className='hover:text-green-200/70 hover:duration-200 -translate-x-80 group-hover:opacity-100 group-hover:translate-x-[80px] transition-all duration-700 opacity-0'>Nosotros</button>
         </nav>

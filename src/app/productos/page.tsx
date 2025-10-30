@@ -74,12 +74,12 @@ const ProductsPage: React.FC = () => {
   }, []);
   
   return (
-    <section className={`${principalFont.className} text-white min-h-screen py-20 px-4 bg-gradient-to-b products-section`}>
+    <section className={`text-white min-h-screen py-20 px-4 bg-gradient-to-b products-section`}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-12">
-          <h2 className="text-5xl font-semibold tracking-wide mb-4">Nordicaps Shop</h2>
-          <p className="max-w-2xl mx-auto">
+        <div ref={headerRef} className={`${principalFont.className} text-center mb-12`}>
+          <h2 className="text-6xl font-semibold tracking-wide mb-4">Nordicaps Shop</h2>
+          <p className="max-w-2xl text-xl mx-auto">
             Descubre las mejores gorras de Junín al mejor precio posible.
           </p>
         </div>

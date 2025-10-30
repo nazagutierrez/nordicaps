@@ -1,16 +1,16 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react'
-import TitleMagazine from '../../components/Title-magazine'
+import TitleMagazine from '../components/Title-magazine'
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { principalFont } from '@/fonts';
 import styles from "./home.module.css"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import img1 from "../../../assets/nordicaps-1.avif";
-import img2 from "../../../assets/nordicaps-2.avif";
-import img3 from "../../../assets/nordicaps-3.avif";
-import img4 from "../../../assets/nordicaps-4.avif";
+import img1 from "../../assets/nordicaps-1.avif";
+import img2 from "../../assets/nordicaps-2.avif";
+import img3 from "../../assets/nordicaps-3.avif";
+import img4 from "../../assets/nordicaps-4.avif";
 import Image from 'next/image';
 import HeroButton from '@/app/components/HeroButton';
 
