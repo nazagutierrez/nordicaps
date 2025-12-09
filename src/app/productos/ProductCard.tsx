@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Product } from '../../types/product';
+import styles from "@/app/utils/highlight-titles/HighlightTitleBlue.module.css";
 
 interface ProductCardProps {
   product: Product;
@@ -34,7 +35,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
   return (
     <div 
       ref={cardRef}
-      className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+      className="card-background rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
     >
       <div className="relative overflow-hidden group">
         <img 
@@ -61,11 +62,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       </div>
       
       <div className="p-4 flex-grow flex flex-col">
-        <h3 className="text-lg font-medium text-gray-900 mb-1">{product.name}</h3>
-        <p className="text-sm text-gray-500 mb-3 flex-grow">{product.description}</p>
+        <h3 className="text-lg font-medium text-gray-200 mb-1">{product.name}</h3>
+        <p className="text-sm text-neutral-400 mb-3 flex-grow">{product.description}</p>
         
         <div className="flex items-center justify-between mt-auto">
-          <span className="text-lg font-semibold text-gray-900">${product.price.toFixed(2)}</span>
+          <span className={`${styles.fancyNoHover} text-lg font-semibold text-gray-200`}>${product.price.toFixed(2)}</span>
           <div className="flex space-x-1">
             {product.colors.slice(0, 3).map((color, i) => (
               <span key={i} className="w-3 h-3 rounded-full inline-block border border-gray-300" style={{ 

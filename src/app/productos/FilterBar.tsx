@@ -23,8 +23,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
             <button
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === 'All' 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                  ? 'card-background border border-[#62A9D7] text-white' 
+                  : 'card-background hover:opacity-70'
               }`}
               onClick={() => onCategoryChange('All')}
             >
@@ -35,8 +35,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                 key={category}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === category 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                    ? 'card-background border border-[#62A9D7] text-white' 
+                    : 'card-background hover:opacity-70'
                 }`}
                 onClick={() => onCategoryChange(category)}
               >

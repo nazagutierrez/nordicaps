@@ -145,7 +145,7 @@ export default function TestimonialsMarquee() {
     <section ref={containerRef} className="w-full overflow-hidden pb-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className={`${styles.fancy} w-fit mx-auto text-4xl md:text-5xl font-bold text-gray-100 mb-6`}>
+          <h2 className={`${styles.fancyNoHover} w-fit mx-auto text-4xl md:text-5xl font-bold text-gray-100 mb-6`}>
             Lo que dicen nuestros clientes
           </h2>
           <p className="text-xl text-neutral-300 max-w-2xl mx-auto">

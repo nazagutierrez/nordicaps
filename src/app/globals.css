@@ -56,6 +56,11 @@
   background-image: url("../assets/noise-nordicaps.png");
 }
 
+.card-background {
+  background-color: #1e2d1e;
+  background-image: url("../assets/noise-nordicaps.png");
+}
+
 .animation-gorras {
   animation: reveal-card linear both;
   animation-timeline: view();
