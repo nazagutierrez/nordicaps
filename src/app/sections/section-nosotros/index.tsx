@@ -54,12 +54,12 @@ useEffect(() => {
     <section
       id="nosotros"
       ref={sectionRef}
-      className="pt-14 pb-14 relative como-comprar-section overflow-hidden"
+      className="pb-14 relative como-comprar-section "
     >
       <div className="absolute top-[12%] left-0 w-full h-2/3 products-section skew-y-[-10deg] shadow-[0_0_35px_5px_rgba(0,0,0,0.25)]"></div>
 
-      <div className="container relative mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2  w-full items-center">
+      <div className="container relative overflow-hidden mx-auto px-4 md:px-6">
+        <div className="grid pt-16 grid-cols-1 lg:grid-cols-2  w-full items-center">
           <div>
             <h1
               ref={headingRef}
@@ -87,8 +87,9 @@ useEffect(() => {
             </div>
           </div>
 
-            <div className="hidden md:block absolute w-[550px] h-[450px] rounded-full right-32 bg-black/20 blur-2xl"></div>
-          <div ref={imageRef} className="relative h-[400px] w-[90%] md:w-[70%] mt-10 lg:mt-0 rounded-lg rotate-3 hover:rotate-0! transition-transform mx-auto">
+          <div ref={imageRef} className="relative max-h-[400px] w-[90%] md:w-[70%] pt-16 lg:pt-0 rounded-lg rotate-3 hover:rotate-0! transition-transform mx-auto">
+            {/* Blur shadow always behind the swiper, same size */}
+            <div className="hidden md:block absolute inset-0 -z-10 scale-105 rounded-full bg-black/30 blur-2xl"></div>
             <Swiper
               effect="cards"
               grabCursor={true}
@@ -116,7 +117,7 @@ useEffect(() => {
 
         <div
           ref={statsRef}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 sm:mt-36 xl:mt-16 text-center"
         >
           {[
             { symbol: "+", number: "500", label: "Gorras vendidas" },
@@ -126,7 +127,7 @@ useEffect(() => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="px-2.5 py-5 button como-comprar-section border border-green-800/80 rounded-lg shadow-[0px_5px_55px_-10px_#73956640]"            >
+              className="px-2.5 content-center py-5 button como-comprar-section border border-green-800/80 rounded-lg shadow-[0px_5px_55px_-10px_#73956640]"            >
               <div className="text-3xl font-bold text-neutral-300">
                 {stat.symbol === "+" && "+"}
                 <CountUp
