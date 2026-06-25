@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import SmoothScroll from './utils/scroll/lenis-scroller'
 import Navbar from './components/navbar'
-import Favicon from '/public/favicon.ico';
+import Favicon from '/public/cap.svg';
 
 const inter = Inter({ subsets: ['latin'] })
 

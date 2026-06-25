@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
   { 
     id: 4, 
     name: "@vaalenrojo", 
-    text: "Una vez que las probas no queres otras! Siempre la mejor calidad.", 
+    text: "Una vez que las probas no queres otras! Calidad 10/10.", 
     photo: "/clients/cliente-4.jpg"
   },
   { 
@@ -51,19 +51,19 @@ const testimonials2: Testimonial[] = [
   { 
     id: 6, 
     name: "@bernirovelli", 
-    text: "Siempre atienden con la mejor onda, gracias chicos de Nordicaps!", 
+    text: "Siempre atienden con la mejor onda, gracias chicos!", 
     photo: "/clients/cliente-6.jpg"
   },
   { 
     id: 7, 
     name: "@almacolonna", 
-    text: "Almi dice que le encantaron las gorras, había tantos diseños que no se decidía.", 
+    text: "Almi dice que le encantaron las gorras!!", 
     photo: "/clients/cliente-7.jpg"
   },
   { 
     id: 8, 
     name: "@belenmontefinale", 
-    text: "Muy rápido y con mucha buena onda todo! Si o si les compro otra.", 
+    text: "Muy rápido y con mucha buena onda todo!", 
     photo: "/clients/cliente-8.jpg"
   },
   { 
@@ -143,19 +143,25 @@ export default function TestimonialsMarquee() {
 
   return (
     <section ref={containerRef} className="w-full overflow-hidden pb-24">
-      <div className="container mx-auto px-4">
+      <div className="flex items-center justify-center px-4">
         <div className="text-center mb-16">
-          <h2 className={`${styles.fancyNoHover} w-fit mx-auto text-4xl md:text-6xl font-bold text-gray-100 mb-6`}>
+          <h2 className={`${styles.fancyNoHover} hidden sm:block w-fit mx-auto text-4xl xs:text-5xl sm:text-6xl font-bold text-gray-100 mb-6`}>
             Lo que dicen nuestros clientes
           </h2>
-          <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
+          <h2 className={`${styles.fancyNoHover} block sm:hidden w-fit mx-auto text-[2.5rem] xs:text-5xl sm:text-6xl font-bold text-gray-100 mb-2 xs:mb-6`}>
+            Lo que dicen 
+          </h2>
+          <h2 className={`${styles.fancyNoHover} block sm:hidden w-fit mx-auto text-[2.5rem] xs:text-5xl sm:text-6xl font-bold text-gray-100 mb-6`}>
+            nuestros clientes
+          </h2>
+          <p className="text-xl max-w-2xl mx-auto">
             Experiencias reales
           </p>
         </div>
       </div>
 
       {/* Fila 1 - moves left */}
-      <div ref={row1Ref} className="flex gap-6 whitespace-nowrap mb-10">
+      <div ref={row1Ref} className="flex gap-2 sm:gap-6 whitespace-nowrap mb-10">
         {testimonials.map((t) => (
           <TestimonialCard key={`row1-${t.id}`} {...t} />
         ))}
@@ -173,22 +179,20 @@ export default function TestimonialsMarquee() {
 
 function TestimonialCard({ name, text, photo }: Testimonial) {
   return (
-    <div className="flex products-section flex-col justify-between max-w-[300px] max-h-[450px] border border-green-900 rounded-xl p-4 flex-shrink-0 shadow-[0px_10px_35px_0px_#73956640] hover:shadow-[0px_15px_40px_0px_#5ba13f40] transition-all duration-300 hover:-translate-y-2">
-      <div className="flex justify-center my-1 items-center">
-        <div>
-          <Image src={photo} className="rounded" alt="photo" width={150} height={150} />
-        </div>
+    <div className="flex products-section flex-col justify-between max-w-[300px] max-h-[450px] border border-green-900 rounded-xl p-4 shrink-0 shadow-[0px_10px_35px_0px_#73956640] hover:shadow-[0px_15px_40px_0px_#5ba13f40] transition-all duration-300 hover:-translate-y-2">
+      <div className="flex justify-center h-[288px] mt-1 mb-3 items-center overflow-hidden rounded-sm">
+        <Image src={photo} className="object-cover h-full w-fit" alt="photo" width={300} height={300} />
       </div>
 
       {/* Author Info */}
       <div className="flex relative items-center gap-4">
-        <div className="flex flex-col">
-          <p className="text-gray-200 tracking-wide leading-snug text-wrap text-lg  mb-2 italic">
+        <div className="flex flex-col w-full">
+          <p className="text-gray-200 w-38 sm:w-full tracking-wide leading-snug text-wrap text-lg  mb-2 italic">
             &quot;{text}&quot;
           </p>
 
           <div className="flex items-center gap-2">
-            <div className="w-8 p-2.5 h-8 bg-gradient-to-br como-comprar-section border border-green-700/80 rounded-2xl flex items-center justify-center text-2xl text-white/80 font-bold shadow-lg">
+            <div className="w-8 p-2.5 h-8 bg-linear-to-br como-comprar-section border border-green-700/80 rounded-2xl flex items-center justify-center text-2xl text-white/80 font-bold shadow-lg">
               <FaRegUser />
             </div>
             <div className="flex-1 min-w-0">
@@ -198,7 +202,7 @@ function TestimonialCard({ name, text, photo }: Testimonial) {
         </div>
         
         {/* Quote Icon */}
-        <div className="text-blue-500 absolute bottom-0 right-0 opacity-40">
+        <div className="text-blue-500 sm:block hidden absolute bottom-0 right-0 opacity-40">
           <BiSolidQuoteAltLeft className="h-9 w-9" />
         </div>
       </div>

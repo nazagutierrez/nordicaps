@@ -35,7 +35,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
   return (
     <div 
       ref={cardRef}
-      className="card-background rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+      className="card-background rounded-sm overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
     >
       <div className="relative overflow-hidden group">
         <img 
@@ -48,10 +48,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         {/* Product labels */}
         <div className="absolute top-0 left-0 p-2 flex flex-col gap-1">
           {product.isNew && (
-            <span className="bg-blue-600 text-white text-xs font-bold uppercase px-2 py-1 rounded">Nuevo</span>
+            <span className="bg-blue-600 text-white text-xs font-bold uppercase px-2 py-1 rounded-sm">Nuevo</span>
           )}
           {product.isBestseller && (
-            <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-1 rounded">MAS VENDIDO</span>
+            <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-1 rounded-sm">MAS VENDIDO</span>
           )}
         </div>
         
@@ -61,9 +61,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         </button>
       </div>
       
-      <div className="p-4 flex-grow flex flex-col">
+      <div className="p-4 grow flex flex-col">
         <h3 className="text-lg font-medium text-gray-200 mb-1">{product.name}</h3>
-        <p className="text-sm text-neutral-400 mb-3 flex-grow">{product.description}</p>
+        <p className="text-sm text-neutral-400 mb-3 grow">{product.description}</p>
         
         <div className="flex items-center justify-between mt-auto">
           <span className={`${styles.fancyNoHover} text-lg font-semibold text-gray-200`}>${product.price.toFixed(2)}</span>

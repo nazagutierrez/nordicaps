@@ -58,7 +58,7 @@ const HomePage = () => {
           <div ref={titleRef}>
             <TitleMagazine />
           </div>
-          <p className={`${principalFont.className} text-neutral-200 subtitle text-2xl italic`}>
+          <p className={`${principalFont.className} text-neutral-200 text-center px-5 subtitle text-2xl italic`}>
             Las gorras con mas estilo de Junin, Buenos Aires.
           </p>
           <i className={`text-neutral-200 text-4xl absolute bottom-10 ${styles.homeArrow}`}>
@@ -69,21 +69,21 @@ const HomePage = () => {
        
 
          {/* Estas dos no rompen la vista (izquierda) */}
-         <div ref={imgLeft1} className='absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] bottom-0 left-0 rotate-45 flex flex-col items-center justify-start pt-3 px-3'>
+         <div ref={imgLeft1} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] bottom-0 left-0 rotate-45 flex-col items-center justify-start pt-3 px-3'>
             <Image src={img1} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
-         <div ref={imgLeft2} className='absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] -bottom-20 left-32 rotate-[30deg] flex flex-col items-center justify-start pt-3 px-3'>
+         <div ref={imgLeft2} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] -bottom-20 left-32 rotate-30 flex-col items-center justify-start pt-3 px-3'>
             <Image src={img2} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
          
          {/* Estas dos rompen la vista (derecha) */}
-         <div ref={imgRight1} className='absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] bottom-0 right-0 -rotate-45 flex flex-col items-center justify-start pt-3 px-3'>
+         <div ref={imgRight1} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] bottom-0 right-0 -rotate-45 flex-col items-center justify-start pt-3 px-3'>
             <Image src={img3} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
-         <div ref={imgRight2} className='absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] -bottom-20 right-32 rotate-[-30deg] flex flex-col items-center justify-start pt-3 px-3'>
+         <div ref={imgRight2} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] -bottom-20 right-32 rotate-[-30deg] flex-col items-center justify-start pt-3 px-3'>
             <Image src={img4} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>

@@ -88,7 +88,7 @@ const ProductsPage: React.FC = () => {
 
   return (
     <section
-      className={`text-white min-h-screen pb-20 pt-24 px-4 bg-gradient-to-b products-section`}
+      className={`text-white min-h-screen pb-20 pt-24 px-4 bg-linear-to-b products-section`}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}

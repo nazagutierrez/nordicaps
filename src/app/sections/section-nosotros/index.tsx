@@ -54,16 +54,16 @@ useEffect(() => {
     <section
       id="nosotros"
       ref={sectionRef}
-      className="pt-14 pb-14 relative como-comprar-section"
+      className="pt-14 pb-14 relative como-comprar-section overflow-hidden"
     >
-      <div className="absolute top-[12%] left-0 w-full h-2/3 products-section -skew-y-[10deg] shadow-[0_0_35px_5px_rgba(0,0,0,0.25)]"></div>
+      <div className="absolute top-[12%] left-0 w-full h-2/3 products-section skew-y-[-10deg] shadow-[0_0_35px_5px_rgba(0,0,0,0.25)]"></div>
 
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2  w-full items-center">
           <div>
             <h1
               ref={headingRef}
-              className={`${styles.fancy} ${principalFont.className} !font-bold w-fit text-4xl md:text-6xl mb-6 text-white`}
+              className={`${styles.fancy} ${principalFont.className} mx-auto lg:mx-0 font-bold! w-fit text-5xl sm:text-6xl mb-12 text-white`}
             >
               Nosotros
             </h1>
@@ -87,27 +87,27 @@ useEffect(() => {
             </div>
           </div>
 
-            <div className="absolute w-[550px] h-[450px] rounded-full right-32 bg-black/20 blur-2xl"></div>
-          <div ref={imageRef} className="relative h-[400px] w-[70%] rounded-lg rotate-3 hover:!rotate-0 transition-transform mx-auto">
+            <div className="hidden md:block absolute w-[550px] h-[450px] rounded-full right-32 bg-black/20 blur-2xl"></div>
+          <div ref={imageRef} className="relative h-[400px] w-[90%] md:w-[70%] mt-10 lg:mt-0 rounded-lg rotate-3 hover:rotate-0! transition-transform mx-auto">
             <Swiper
               effect="cards"
               grabCursor={true}
               modules={[EffectCards]}
-              className="h-full w-full sm:text-base text-sm rounded"
+              className="h-full w-full  sm:text-base text-sm rounded-sm"
             >
-              <SwiperSlide className="rounded">
+              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
                 <Image src={image} alt="slider image" />
               </SwiperSlide>
-              <SwiperSlide className="rounded">
+              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
                 <Image src={image} alt="slider image" />
               </SwiperSlide>
-              <SwiperSlide className="rounded">
+              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
                 <Image src={image} alt="slider image" />
               </SwiperSlide>
-              <SwiperSlide className="rounded">
+              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
                 <Image src={image} alt="slider image" />
               </SwiperSlide>
-              <SwiperSlide className="rounded">
+              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
                 <Image src={image} alt="slider image" />
               </SwiperSlide>
             </Swiper>
