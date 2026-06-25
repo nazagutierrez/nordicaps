@@ -88,15 +88,15 @@ const ProductsPage: React.FC = () => {
 
   return (
     <section
-      className={`text-white min-h-screen py-20 px-4 bg-gradient-to-b products-section`}
+      className={`text-white min-h-screen pb-20 pt-24 px-4 bg-gradient-to-b products-section`}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div
           ref={headerRef}
-          className={`${principalFont.className} text-center mb-12`}
+          className={`${principalFont.className} text-center mb-20`}
         >
-          <h2 className="text-6xl font-semibold tracking-wide mb-4">
+          <h2 className="text-8xl font-semibold tracking-wide mb-4">
             Nordicaps Shop
           </h2>
           <p className="max-w-2xl text-xl mx-auto">

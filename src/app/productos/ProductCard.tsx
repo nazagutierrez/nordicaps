@@ -56,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         </div>
         
         {/* Quick add button */}
-        <button className="absolute bottom-0 right-0 m-4 bg-white rounded-full p-2 shadow-lg opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+        <button className="absolute bottom-0 right-0 m-4 bg-neutral-800 rounded-full p-2 shadow-lg opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
           COMPRAR
         </button>
       </div>

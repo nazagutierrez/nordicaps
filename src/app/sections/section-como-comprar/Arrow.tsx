@@ -35,7 +35,6 @@ export const Arrow = ({
         trigger: propRef?.current,
         start: "top 50%",
         once: true,
-        markers: true,
       },
     });
   }, []);
