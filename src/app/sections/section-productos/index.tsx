@@ -1,14 +1,28 @@
 import React from "react";
 import CarouselImages from "../../components/CarouselImages";
 import imageCarousel2 from "@/assets/nordicaps-2.avif";
+import imageCarouselGeneral from "@/assets/gorras/gorras-general.webp";
 import imageCarousel3 from "@/assets/nordicaps-3.avif";
 import imageCarousel1 from "@/assets/nordicaps-1.avif";
 import imageCarousel4 from "@/assets/nordicaps-4.avif";
+import imagePilusos1 from "@/assets/pilusos/piluso-amarillo-1.webp";
+import imagePilusosGeneral from "@/assets/pilusos/pilusos-general.webp";
+import imagePilusos2 from "@/assets/pilusos/piluso-marron-1-v1.webp";
+import imagePilusos3 from "@/assets/pilusos/piluso-negro-1.webp";
+import imagePilusos4 from "@/assets/pilusos/piluso-rojo-1.webp";
+import imageGorrosGeneral from "@/assets/gorros/gorros-general.webp";
+import imageGorrosGeneral2 from "@/assets/gorros/gorros-general-2.webp";
+import imageGorros2 from "@/assets/gorros/gorro-naranja-2-v1.webp";
+import imageGorros3 from "@/assets/gorros/gorro-3.webp";
 import { principalFont } from '../../../fonts/index'
 import styles from "@/app/utils/highlight-titles/HighlightTitleGreen.module.css";
 import Link from "next/link";
 
-const productsTypes = ["gorras", "pilusos", "gorros"]
+const productsTypes = [
+  { name: "gorras", images: [imageCarouselGeneral, imageCarousel2, imageCarousel3, imageCarousel4, imageCarousel1] },
+  { name: "pilusos", images: [imagePilusos1, imagePilusosGeneral, imagePilusos2, imagePilusos3, imagePilusos4] },
+  { name: "gorros", images: [imageGorrosGeneral, imageGorrosGeneral2, imageGorros2, imageGorros3] },
+]
 
 const SectionProductos = () => {
   return (
@@ -21,14 +35,9 @@ const SectionProductos = () => {
         {
           productsTypes.map((productType, index) => (
             <div key={index} className={`w-full max-w-[350px] px- md:px-0 animation-${productType}`}>
-              <h3 className="text-3xl md:text-2xl pb-3">{productType}</h3>
+              <h3 className="text-3xl md:text-2xl pb-3">{productType.name}</h3>
               <CarouselImages
-                images={[
-                  imageCarousel1,
-                  imageCarousel2,
-                  imageCarousel3,
-                  imageCarousel4,
-                ]}
+                images={productType.images}
               />
             </div>
           ))

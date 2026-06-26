@@ -18,7 +18,7 @@ export default function CarouselImages({ images }: { images: StaticImageData[] }
   }, [emblaApi])
 
   return (
-    <div className="overflow-hidden rounded-md" ref={emblaRef}>
+    <div className="overflow-hidden rounded-md relative" ref={emblaRef}>
       <div className="flex">
         {images.map((image, index) => (
           <div key={index} className="flex-[0_0_100%] min-w-0 ">

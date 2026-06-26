@@ -16,6 +16,9 @@ const COLOR_MAP: Record<string, string> = {
   grey: "#808080", gray: "#808080", "forest green": "#228B22",
   burgundy: "#800020", brown: "#A52A2A", beige: "#F5F5DC",
   charcoal: "#36454F", green: "#008000", blue: "#0000FF", purple: "#800080",
+  blanco: "#ffffff", negra: "#111111", negro: "#111111", rosa: "#FFB6C1",
+  naranja: "#FFA500", amarillo: "#FFD700", marron: "#A52A2A", rojo: "#FF0000",
+  bordo: "#79282C",
 };
 const colorHex = (name: string) => COLOR_MAP[name.toLowerCase()] ?? "#888888";
 
@@ -129,7 +132,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
 
         <div className="flex items-center justify-between mt-auto">
           <span className={`${styles.fancyNoHover} text-lg font-semibold text-gray-200`}>
-            ${product.price.toFixed(2)}
+            ${product.price.toLocaleString("es-AR")}
           </span>
           <div className="flex space-x-1 items-center">
             {product.colors.slice(0, 3).map((color, i) => (

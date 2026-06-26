@@ -13,6 +13,7 @@ import { principalFont } from "@/fonts";
 import styles from "@/app/utils/highlight-titles/HighlightTitleBlue.module.css";
 import ImageWithLoader from "@/app/components/ImageWithLoader";
 import { Product } from "@/app/types/product";
+import { socialMediaAccounts } from "@/app/utils/social-const";
 
 // ── Color helper ──────────────────────────────────────────────────────────────
 const COLOR_MAP: Record<string, string> = {
@@ -29,6 +30,15 @@ const COLOR_MAP: Record<string, string> = {
   green:          "#008000",
   blue:           "#0000FF",
   purple:         "#800080",
+  blanco:         "#ffffff",
+  negra:          "#111111",
+  negro:          "#111111",
+  rosa:           "#FFB6C1",
+  naranja:        "#FFA500",
+  amarillo:       "#FFD700",
+  marron:         "#A52A2A",
+  rojo:           "#FF0000",
+  bordo:          "#79282C",
 };
 
 const colorHex = (name: string) => COLOR_MAP[name.toLowerCase()] ?? "#888888";
@@ -295,12 +305,20 @@ export default function ProductDetailPage() {
 
           {/* CTA */}
           <div data-anim style={{ opacity: 0 }} className="flex flex-col sm:flex-row gap-3 pt-2">
-            <button className="flex-1 py-3.5 rounded-xl bg-[#62A9D7] hover:bg-[#4e8fb5] text-white font-semibold text-base transition-all duration-200 hover:shadow-[0_0_20px_4px_rgba(98,169,215,0.3)] active:scale-[0.98] cursor-pointer">
+            <a 
+              href={`${socialMediaAccounts.whatsappPlain}?text=Hola!%20Vengo%20de%20la%20web.%20Quer%C3%ADa%20hacerte%20una%20consulta.%20Me%20interesa%20el%20producto%20${product.name}%20color%20${product.colors[selectedColor]}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex-1 text-center py-3.5 rounded-xl como-comprar-section border border-green-700 text-white font-semibold text-base transition-all duration-200 hover:shadow-[0_0_20px_4px_rgba(98,169,215,0.3)] active:scale-[0.98] cursor-pointer">
               Consultar por WhatsApp
-            </button>
-            <button className="flex-1 py-3.5 rounded-xl card-background border border-white/15 hover:border-white/35 text-white/90 font-medium text-base transition-all duration-200 cursor-pointer">
+            </a>
+            <a 
+              href={socialMediaAccounts.instagram} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex-1 text-center py-3.5 rounded-xl card-background border border-white/15 hover:border-white/35 text-white/90 font-medium text-base transition-all duration-200 cursor-pointer">
               Ver más en Instagram
-            </button>
+            </a>
           </div>
 
           {/* Meta info */}
@@ -375,7 +393,7 @@ export default function ProductDetailPage() {
                       <p className="text-sm font-medium text-white/90 group-hover:text-[#62A9D7] transition-colors duration-200 truncate">
                         {rel.name}
                       </p>
-                      <p className="text-xs text-[#62A9D7] mt-0.5">${rel.price.toFixed(2)}</p>
+                      <p className="text-xs text-[#62A9D7] mt-0.5">${rel.price.toLocaleString("es-AR")}</p>
                     </div>
                   </Link>
                 </SwiperSlide>

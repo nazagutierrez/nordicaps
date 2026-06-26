@@ -11,9 +11,9 @@ import image from "../../../assets/nordicaps-verde.webp"
 import instagramImage from "../../../assets/instagram.png"
 import whatsappImage from "../../../assets/whatsapp-icon.svg"
 import Image from "next/image";
-import Link from "next/link";
 import CountUp from "@/app/ui/CountUp";
 import { principalFont } from "@/fonts";
+import { socialMediaAccounts } from "@/app/utils/social-const";
 
 export default function Nosotros() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -149,15 +149,15 @@ useEffect(() => {
       </div>
         <div className="mt-16 text-center gap-5 flex justify-center items-center">
           <div className="group flex">
-            <Link href="/productos" className="text-2xl px-2.5 py-1.5 button bg-black/15 rounded-lg hover:border-green-300/70 shadow-[0px_15px_30px_0px_#89629291] hover:shadow-[0px_25px_40px_2px_#ad5fbea8] transition-all border-white/40">
+            <a href={socialMediaAccounts.instagram} target="_blank" rel="noopener noreferrer" className="text-2xl px-2.5 py-1.5 button bg-black/15 rounded-lg hover:border-green-300/70 shadow-[0px_15px_30px_0px_#89629291] hover:shadow-[0px_25px_40px_2px_#ad5fbea8] transition-all border-white/40">
               <span><Image src={instagramImage} className="brightness-[0.85]" alt="whatsapp" width={30} height={30} /></span>
-            </Link>
+            </a>
           </div>
 
           <div className="group flex">
-            <Link href="/productos" className="text-2xl px-2.5 py-1.5 button bg-black/15 rounded-lg hover:border-green-300/70 shadow-[0px_15px_30px_0px_#70926265] hover:shadow-[0px_25px_40px_2px_#6fac5765] transition-all border-white/40">
+            <a href={socialMediaAccounts.whatsapp} target="_blank" rel="noopener noreferrer" className="text-2xl px-2.5 py-1.5 button bg-black/15 rounded-lg hover:border-green-300/70 shadow-[0px_15px_30px_0px_#70926265] hover:shadow-[0px_25px_40px_2px_#6fac5765] transition-all border-white/40">
               <span><Image src={whatsappImage} className="opacity-80 p-px" alt="whatsapp" width={30} height={30} /></span>
-            </Link>
+            </a>
           </div>
         </div>
     </section>
