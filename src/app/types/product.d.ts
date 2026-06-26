@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   price: number;
   imageUrl: string;
+  images?: string[];
   colors: string[];
   isNew?: boolean;
   isBestseller?: boolean;
