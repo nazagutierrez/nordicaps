@@ -7,7 +7,12 @@ import styles from "@/app/utils/highlight-titles/HighlightTitleGreen.module.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import 'swiper/swiper-bundle.css';
-import image from "../../../assets/nordicaps-verde.webp"
+import imageCarouselGeneral from "@/assets/gorras/gorras-general.webp";
+import imageCarousel2 from "@/assets/nordicaps-2.avif";
+import imagePilusosGeneral from "@/assets/pilusos/pilusos-general.webp";
+import imagePilusos2 from "@/assets/pilusos/piluso-marron-1-v1.webp";
+import gorraRosa2Img1 from '@/assets/gorras/gorra-rosa-2-v1.webp';
+
 import instagramImage from "../../../assets/instagram.png"
 import whatsappImage from "../../../assets/whatsapp-icon.svg"
 import Image from "next/image";
@@ -87,7 +92,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <div ref={imageRef} className="relative max-h-[400px] w-[90%] md:w-[70%] pt-16 lg:pt-0 rounded-lg rotate-3 hover:rotate-0! transition-transform mx-auto">
+          <div ref={imageRef} className="relative w-[90%] md:w-[70%] pt-16 lg:pt-0 rounded-lg rotate-3 hover:rotate-0! transition-transform mx-auto">
             {/* Blur shadow always behind the swiper, same size */}
             <div className="hidden md:block absolute inset-0 -z-10 scale-105 rounded-full bg-black/30 blur-2xl"></div>
             <Swiper
@@ -96,20 +101,23 @@ useEffect(() => {
               modules={[EffectCards]}
               className="h-full w-full  sm:text-base text-sm rounded-sm"
             >
-              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
-                <Image src={image} alt="slider image" />
+              <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
+                <Image src={imageCarouselGeneral} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
-              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
-                <Image src={image} alt="slider image" />
+              <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
+                <Image src={imageCarousel2} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
-              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
-                <Image src={image} alt="slider image" />
+              <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
+                <Image src={gorraRosa2Img1} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
-              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
-                <Image src={image} alt="slider image" />
+              <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
+                <Image src={imageCarousel2} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
-              <SwiperSlide className="rounded-sm border border-black/40 h-fit!">
-                <Image src={image} alt="slider image" />
+              <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
+                <Image src={imagePilusos2} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
+              </SwiperSlide>
+              <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
+                <Image src={imagePilusosGeneral} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -117,7 +125,7 @@ useEffect(() => {
 
         <div
           ref={statsRef}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 sm:mt-36 xl:mt-16 text-center"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center"
         >
           {[
             { symbol: "+", number: "500", label: "Gorras vendidas" },
