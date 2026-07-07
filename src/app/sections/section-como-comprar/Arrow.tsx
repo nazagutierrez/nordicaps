@@ -6,7 +6,6 @@ export const Arrow = ({
   type,
   delay,
   propRef,
-  w,
   h,
 }: {
   className: string;
@@ -18,7 +17,7 @@ export const Arrow = ({
   const pathRef = useRef(null);
 
   useEffect(() => {
-    const path = pathRef.current;
+    const path = pathRef.current as unknown as SVGPathElement;
     const length = path.getTotalLength();
 
     gsap.set(path, {
