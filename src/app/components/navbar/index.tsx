@@ -84,9 +84,9 @@ const Navbar = () => {
 
       {/* Mobile dropdown menu */}
       <div
-        className={`md:hidden justify-self-end w-fit overflow-hidden transition-all duration-300 ease-in-out ${mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`md:hidden ml-auto w-fit overflow-hidden transition-all duration-300 ease-in-out ${mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <nav className={`${principalFont.className} flex flex-col justify-self-end gap-1 px-5 pb-3 text-white text-base`}>
+        <nav className={`${principalFont.className} flex flex-col justify-end gap-1 px-5 pb-3 text-white text-base`}>
           {navItems.map((item) => (
             <button
               key={item.target}

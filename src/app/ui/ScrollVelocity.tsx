@@ -93,27 +93,46 @@ export default function TestimonialsMarquee() {
 
     if (!row1 || !row2) return;
 
-    // Duplicate the content
-    const duplicateContent = (element: HTMLDivElement) => {
-      element.innerHTML += element.innerHTML;
-    };
+    // Solo duplicamos el contenido si no ha sido duplicado antes
+    if (row1.children.length === testimonials.length) {
+      row1.innerHTML += row1.innerHTML;
+    }
+    if (row2.children.length === testimonials2.length) {
+      row2.innerHTML += row2.innerHTML;
+    }
 
-    duplicateContent(row1);
-    duplicateContent(row2);
+    let mm = gsap.matchMedia();
 
-    gsap.to(row1, {
-      x: -900,
-      ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      }
+    // Dispositivos móviles (menos de 640px): Infinite Marquee
+    mm.add("(max-width: 639px)", () => {
+      // Fila 1 - hacia la izquierda
+      gsap.fromTo(
+        row1,
+        { xPercent: 0 },
+        {
+          xPercent: -50,
+          ease: "none",
+          duration: 14, // Faster speed
+          repeat: -1,
+        }
+      );
+
+      // Fila 2 - hacia la derecha
+      gsap.fromTo(
+        row2,
+        { xPercent: -50 },
+        {
+          xPercent: 0,
+          ease: "none",
+          duration: 14, // Faster speed
+          repeat: -1,
+        }
+      );
     });
-    gsap.fromTo(
-      row2, 
-      {
+
+    // Pantallas grandes (sm en adelante): Scroll-based
+    mm.add("(min-width: 640px)", () => {
+      gsap.to(row1, {
         x: -900,
         ease: "none",
         scrollTrigger: {
@@ -122,22 +141,27 @@ export default function TestimonialsMarquee() {
           end: "bottom top",
           scrub: true,
         }
-      },
-      {
-        x: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
+      });
+
+      gsap.fromTo(
+        row2, 
+        { x: -900 },
+        {
+          x: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          }
         }
-      }
-    );
+      );
+    });
 
     // Clean up function
     return () => {
-      gsap.killTweensOf([row1, row2]);
+      mm.revert(); // Automatically kills tweens and ScrollTriggers created in matchMedia
     };
   }, []);
 
@@ -161,14 +185,14 @@ export default function TestimonialsMarquee() {
       </div>
 
       {/* Fila 1 - moves left */}
-      <div ref={row1Ref} className="flex gap-2 sm:gap-6 whitespace-nowrap mb-10">
+      <div ref={row1Ref} className="flex w-max gap-2 sm:gap-6 whitespace-nowrap mb-10">
         {testimonials.map((t) => (
           <TestimonialCard key={`row1-${t.id}`} {...t} />
         ))}
       </div>
 
       {/* Fila 2 - moves right */}
-      <div ref={row2Ref} className="flex gap-6 whitespace-nowrap">
+      <div ref={row2Ref} className="flex w-max gap-6 whitespace-nowrap">
         {testimonials2.map((t) => (
           <TestimonialCard key={`row2-${t.id}`} {...t} />
         ))}
@@ -179,15 +203,15 @@ export default function TestimonialsMarquee() {
 
 function TestimonialCard({ name, text, photo }: Testimonial) {
   return (
-    <div className="flex products-section flex-col justify-between max-w-[300px] max-h-[450px] border border-green-900 rounded-xl p-4 shrink-0 shadow-[0px_10px_35px_0px_#73956640] hover:shadow-[0px_15px_40px_0px_#5ba13f40] transition-all duration-300 hover:-translate-y-2">
-      <div className="flex justify-center h-[288px] mt-1 mb-3 items-center overflow-hidden rounded-sm">
-        <Image src={photo} className="object-cover h-full w-fit" alt="photo" width={300} height={300} />
+    <div className="flex products-section flex-col w-[220px] sm:w-[300px] border border-green-900 rounded-xl p-4 shrink-0 shadow-[0px_10px_35px_0px_#73956640] hover:shadow-[0px_15px_40px_0px_#5ba13f40] transition-all duration-300 hover:-translate-y-2">
+      <div className="flex justify-center w-full aspect-[3/4] mt-1 mb-2 items-center overflow-hidden rounded-sm shrink-0">
+        <Image src={photo} className="object-cover h-full w-full" alt="photo" width={300} height={400} />
       </div>
 
       {/* Author Info */}
-      <div className="flex relative items-center gap-4">
-        <div className="flex flex-col w-full">
-          <p className="text-gray-200 w-38 sm:w-full tracking-wide leading-snug text-wrap text-lg  mb-2 italic">
+      <div className="flex-1 flex relative items-center gap-4 mt-2">
+        <div className="flex flex-col justify-between h-full w-full">
+          <p className="text-gray-200 w-full whitespace-normal tracking-wide leading-snug text-lg mb-2 italic">
             &quot;{text}&quot;
           </p>
 
