@@ -8,7 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import 'swiper/swiper-bundle.css';
 import imageCarouselGeneral from "@/assets/gorras/gorras-general.webp";
-import imageCarousel2 from "@/assets/nordicaps-2.avif";
+import img2Avif from "@/assets/nordicaps-2.avif";
+import img2Webp from "@/assets/nordicaps-2.webp";
 import imagePilusosGeneral from "@/assets/pilusos/pilusos-general.webp";
 import imagePilusos2 from "@/assets/pilusos/piluso-marron-1-v1.webp";
 import gorraRosa2Img1 from '@/assets/gorras/gorra-rosa-2-v1.webp';
@@ -16,6 +17,7 @@ import gorraRosa2Img1 from '@/assets/gorras/gorra-rosa-2-v1.webp';
 import instagramImage from "../../../assets/instagram.png"
 import whatsappImage from "../../../assets/whatsapp-icon.svg"
 import Image from "next/image";
+import Picture from "@/app/components/Picture";
 import CountUp from "@/app/ui/CountUp";
 import { principalFont } from "@/fonts";
 import { socialMediaAccounts } from "@/app/utils/social-const";
@@ -105,13 +107,13 @@ useEffect(() => {
                 <Image src={imageCarouselGeneral} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
               <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
-                <Image src={imageCarousel2} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
+                <Picture avif={img2Avif} webp={img2Webp} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
               <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
                 <Image src={gorraRosa2Img1} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
               <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
-                <Image src={imageCarousel2} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
+                <Picture avif={img2Avif} webp={img2Webp} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
               </SwiperSlide>
               <SwiperSlide className="h-fit flex justify-center items-center overflow-hidden">
                 <Image src={imagePilusos2} alt="slider image" className="h-auto max-h-130 w-auto rounded-lg" />
@@ -135,7 +137,7 @@ useEffect(() => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="px-2.5 content-center py-5 button como-comprar-section border border-green-800/80 rounded-lg shadow-[0px_5px_55px_-10px_#73956640]"            >
+              className="px-2.5 bg-[#092b09]! content-center py-5 button como-comprar-section border border-green-800/80 rounded-lg shadow-[0px_5px_55px_-10px_#73956640]"            >
               <div className="text-3xl font-bold text-neutral-300">
                 {stat.symbol === "+" && "+"}
                 <CountUp

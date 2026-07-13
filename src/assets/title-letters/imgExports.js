@@ -1,21 +1,28 @@
-import n from "./1.avif";
-import o from "./2.avif";
-import r from "./3.avif";
-import d from "./4.avif";
-import i from "./5.avif";
-import c from "./6.avif";
-import a from "./7.avif";
-import p from "./8.avif";
-import s from "./9.avif";
+import nAvif from "./1.avif";
+import nWebp from "./1.webp";
+import oAvif from "./2.avif";
+import oWebp from "./2.webp";
+import rAvif from "./3.avif";
+import rWebp from "./3.webp";
+import dAvif from "./4.avif";
+import dWebp from "./4.webp";
+import iAvif from "./5.avif";
+import iWebp from "./5.webp";
+import cAvif from "./6.avif";
+import cWebp from "./6.webp";
+import aAvif from "./7.avif";
+import aWebp from "./7.webp";
+import pAvif from "./8.avif";
+import pWebp from "./8.webp";
+import sAvif from "./9.avif";
+import sWebp from "./9.webp";
 
-export {
-  n,
-  o,
-  r,
-  d,
-  i,
-  c,
-  a,
-  p,
-  s
-};
+export const n = { avif: nAvif, webp: nWebp };
+export const o = { avif: oAvif, webp: oWebp };
+export const r = { avif: rAvif, webp: rWebp };
+export const d = { avif: dAvif, webp: dWebp };
+export const i = { avif: iAvif, webp: iWebp };
+export const c = { avif: cAvif, webp: cWebp };
+export const a = { avif: aAvif, webp: aWebp };
+export const p = { avif: pAvif, webp: pWebp };
+export const s = { avif: sAvif, webp: sWebp };

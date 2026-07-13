@@ -19,31 +19,31 @@ const testimonials: Testimonial[] = [
     id: 1, 
     name: "@carojuareguizar", 
     text: "La gorra mas linda de todas, me acompañó a la playa!", 
-    photo: "/clients/cliente-1.jpg"
+    photo: "/clients/cliente-1.webp"
   },
   { 
     id: 2, 
     name: "@flormoura", 
     text: "Me encantaron las gorras! Las llevé para todos lados.", 
-    photo: "/clients/cliente-2.jpg"
+    photo: "/clients/cliente-2.webp"
   },
   { 
     id: 3, 
     name: "@camilaherra_", 
     text: "Muy bueno el piluso y la atención, todo muy rápido.", 
-    photo: "/clients/cliente-3.jpg"
+    photo: "/clients/cliente-3.webp"
   },
   { 
     id: 4, 
     name: "@vaalenrojo", 
     text: "Una vez que las probas no queres otras! Calidad 10/10.", 
-    photo: "/clients/cliente-4.jpg"
+    photo: "/clients/cliente-4.webp"
   },
   { 
     id: 5, 
     name: "@lolicastillejo", 
     text: "El diseño es hermoso, siempre elijo Nordicaps.", 
-    photo: "/clients/cliente-5.jpg"
+    photo: "/clients/cliente-5.webp"
   },
 ];
 
@@ -52,31 +52,31 @@ const testimonials2: Testimonial[] = [
     id: 6, 
     name: "@bernirovelli", 
     text: "Siempre atienden con la mejor onda, gracias chicos!", 
-    photo: "/clients/cliente-6.jpg"
+    photo: "/clients/cliente-6.webp"
   },
   { 
     id: 7, 
     name: "@almacolonna", 
     text: "Almi dice que le encantaron las gorras!!", 
-    photo: "/clients/cliente-7.jpg"
+    photo: "/clients/cliente-7.webp"
   },
   { 
     id: 8, 
     name: "@belenmontefinale", 
     text: "Muy rápido y con mucha buena onda todo!", 
-    photo: "/clients/cliente-8.jpg"
+    photo: "/clients/cliente-8.webp"
   },
   { 
     id: 9, 
     name: "@juanherediaok_", 
     text: "Muy buena gorra, me sirve para ir a todos lados!", 
-    photo: "/clients/cliente-9.jpg"
+    photo: "/clients/cliente-9.webp"
   },
   { 
     id: 10, 
     name: "@estilistadiego", 
     text: "El producto perfecto para esta temporada de verano!", 
-    photo: "/clients/cliente-10.jpg"
+    photo: "/clients/cliente-10.webp"
   },
 ];
 

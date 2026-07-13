@@ -1,10 +1,14 @@
 import React from "react";
 import CarouselImages from "../../components/CarouselImages";
-import imageCarousel2 from "@/assets/nordicaps-2.avif";
+import img2Avif from "@/assets/nordicaps-2.avif";
+import img2Webp from "@/assets/nordicaps-2.webp";
 import imageCarouselGeneral from "@/assets/gorras/gorras-general.webp";
-import imageCarousel3 from "@/assets/nordicaps-3.avif";
-import imageCarousel1 from "@/assets/nordicaps-1.avif";
-import imageCarousel4 from "@/assets/nordicaps-4.avif";
+import img3Avif from "@/assets/nordicaps-3.avif";
+import img3Webp from "@/assets/nordicaps-3.webp";
+import img1Avif from "@/assets/nordicaps-1.avif";
+import img1Webp from "@/assets/nordicaps-1.webp";
+import img4Avif from "@/assets/nordicaps-4.avif";
+import img4Webp from "@/assets/nordicaps-4.webp";
 import imagePilusos1 from "@/assets/pilusos/piluso-amarillo-1.webp";
 import imagePilusosGeneral from "@/assets/pilusos/pilusos-general.webp";
 import imagePilusos2 from "@/assets/pilusos/piluso-marron-1-v1.webp";
@@ -19,7 +23,7 @@ import styles from "@/app/utils/highlight-titles/HighlightTitleGreen.module.css"
 import Link from "next/link";
 
 const productsTypes = [
-  { name: "gorras", images: [imageCarouselGeneral, imageCarousel2, imageCarousel3, imageCarousel4, imageCarousel1] },
+  { name: "gorras", images: [imageCarouselGeneral, {avif: img2Avif, webp: img2Webp}, {avif: img3Avif, webp: img3Webp}, {avif: img4Avif, webp: img4Webp}, {avif: img1Avif, webp: img1Webp}] },
   { name: "pilusos", images: [imagePilusos1, imagePilusosGeneral, imagePilusos2, imagePilusos3, imagePilusos4] },
   { name: "gorros", images: [imageGorrosGeneral, imageGorrosGeneral2, imageGorros2, imageGorros3] },
 ]

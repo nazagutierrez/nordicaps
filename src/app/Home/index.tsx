@@ -7,11 +7,16 @@ import { principalFont } from '@/fonts';
 import styles from "./home.module.css"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import img1 from "../../assets/nordicaps-1.avif";
-import img2 from "../../assets/nordicaps-2.avif";
-import img3 from "../../assets/nordicaps-3.avif";
-import img4 from "../../assets/nordicaps-4.avif";
+import img1Avif from "../../assets/nordicaps-1.avif";
+import img1Webp from "../../assets/nordicaps-1.webp";
+import img2Avif from "../../assets/nordicaps-2.avif";
+import img2Webp from "../../assets/nordicaps-2.webp";
+import img3Avif from "../../assets/nordicaps-3.avif";
+import img3Webp from "../../assets/nordicaps-3.webp";
+import img4Avif from "../../assets/nordicaps-4.avif";
+import img4Webp from "../../assets/nordicaps-4.webp";
 import Image from 'next/image';
+import Picture from '@/app/components/Picture';
 import HeroButton from '@/app/components/HeroButton';
 import { socialMediaAccounts } from '../utils/social-const';
 
@@ -81,21 +86,21 @@ const HomePage = () => {
 
          {/* Estas dos no rompen la vista (izquierda) */}
          <div ref={imgLeft1} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] bottom-0 left-0 rotate-45 flex-col items-center justify-start pt-3 px-3'>
-            <Image src={img1} className='w-44 h-fit object-cover' alt="background" />
+            <Picture avif={img1Avif} webp={img1Webp} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
          <div ref={imgLeft2} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] -bottom-20 left-32 rotate-30 flex-col items-center justify-start pt-3 px-3'>
-            <Image src={img2} className='w-44 h-fit object-cover' alt="background" />
+            <Picture avif={img2Avif} webp={img2Webp} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
          
          {/* Estas dos rompen la vista (derecha) */}
          <div ref={imgRight1} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] bottom-0 right-0 -rotate-45 flex-col items-center justify-start pt-3 px-3'>
-            <Image src={img3} className='w-44 h-fit object-cover' alt="background" />
+            <Picture avif={img3Avif} webp={img3Webp} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
          <div ref={imgRight2} className='hidden md:flex absolute border border-gray-400 bg-[#ebebeb] w-fit h-[300px] -bottom-20 right-32 rotate-[-30deg] flex-col items-center justify-start pt-3 px-3'>
-            <Image src={img4} className='w-44 h-fit object-cover' alt="background" />
+            <Picture avif={img4Avif} webp={img4Webp} className='w-44 h-fit object-cover' alt="background" />
             <div className='h-10'></div>
          </div>
 

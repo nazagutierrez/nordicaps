@@ -5,8 +5,9 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Image, { StaticImageData } from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
 import { IoIosArrowBack } from "react-icons/io";
+import Picture from './Picture';
 
-export default function CarouselImages({ images }: { images: StaticImageData[] }) {
+export default function CarouselImages({ images }: { images: any[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay({ delay: 2500 })])
   
   const scrollPrev = useCallback(() => {
@@ -22,7 +23,11 @@ export default function CarouselImages({ images }: { images: StaticImageData[] }
       <div className="flex">
         {images.map((image, index) => (
           <div key={index} className="flex-[0_0_100%] min-w-0 ">
-            <Image src={image} className="object-cover h-full w-[350px]" alt="Carousel image" width={300} height={300} />
+            {image.avif && image.webp ? (
+              <Picture avif={image.avif} webp={image.webp} className="object-cover h-full w-[350px]" alt="Carousel image" />
+            ) : (
+              <Image src={image} className="object-cover h-full w-[350px]" alt="Carousel image" width={300} height={300} />
+            )}
           </div>
         ))}
       </div>

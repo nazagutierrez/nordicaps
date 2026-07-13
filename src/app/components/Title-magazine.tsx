@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import React from "react";
 import styles from "@/app/Home/home.module.css";
 import { n, o, r, d, i, c, a, p, s } from "@/assets/title-letters/imgExports";
@@ -10,7 +10,7 @@ const TitleMagazine = () => {
     customClass,
     animationType = 1,
   }: {
-    img: StaticImport;
+    img: { avif: StaticImport; webp: StaticImport };
     w?: string;
     smW?: string;
     xlW?: string;
@@ -19,13 +19,17 @@ const TitleMagazine = () => {
     aspect?: string;
   }) => {
     const animationStyle = animationType === 1 ? styles.homeLetterRight : styles.homeLetterLeft;
+    
+    const common = { alt: "Letra del titulo", className: `object-contain h-auto ${customClass} ${animationStyle}` };
+    const { props: { srcSet: avifSrcSet } } = getImageProps({ ...common, src: img.avif });
+    const { props: { srcSet: webpSrcSet, ...rest } } = getImageProps({ ...common, src: img.webp });
 
     return (
-      <Image
-        src={img}
-        alt="Letra del titulo"
-        className={`object-contain h-auto ${customClass} ${animationStyle}`}
-      />
+      <picture style={{ display: 'contents' }}>
+        <source srcSet={avifSrcSet} type="image/avif" />
+        <source srcSet={webpSrcSet} type="image/webp" />
+        <img {...rest} />
+      </picture>
     );
   };
 
