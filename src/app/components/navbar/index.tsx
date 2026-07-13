@@ -2,14 +2,19 @@
 
 import { principalFont } from "@/fonts";
 import { useLenis } from "lenis/react";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { usePathname, useRouter } from "next/navigation";
+import { bind } from "cuelume";
 
 const Navbar = () => {
   const lenis = useLenis(({ scroll }) => {});
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  useEffect(() => {
+    bind();
+  }, []);
 
   const navItems = [
     { label: "Inicio", target: "#inicio" },
@@ -37,6 +42,7 @@ const Navbar = () => {
       <div className='flex ps-5 pr-3 items-center gap-x-6 w-full justify-between md:justify-start'>
         {/* Logo */}
         <svg
+          data-cuelume-press="press"
           onClick={() => handleNav("#inicio")}
           className="cap-svg shrink-0 pt-4 h-[80px] w-[80px] xs:h-[90px] xs:w-[90px] cursor-pointer"
           enableBackground="new 90 110 330 280"
@@ -54,6 +60,7 @@ const Navbar = () => {
           {navItems.map((item, i) => (
             <React.Fragment key={item.target}>
               <button
+                data-cuelume-press="press"
                 onClick={() => handleNav(item.target)}
                 className='hover:text-green-200/70 flex items-center gap-x-1 transition-colors duration-200 cursor-pointer'
               >
@@ -72,6 +79,7 @@ const Navbar = () => {
 
         {/* Mobile hamburger button */}
         <button
+          data-cuelume-press="press"
           className='md:hidden flex flex-col gap-[5px] p-2 pt-4 ml-1 text-white'
           onClick={() => setMobileOpen(prev => !prev)}
           aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
@@ -90,6 +98,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <button
               key={item.target}
+              data-cuelume-press="press"
               onClick={() => handleNav(item.target)}
               className='w-full flex justify-end items-center gap-x-1 text-xl text-end py-1.5 border-b border-white/30 hover:text-green-200/70 transition-colors duration-200 last:border-b-0'
             >
